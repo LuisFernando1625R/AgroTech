@@ -6,14 +6,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-html {
+:root {
      scroll-behavior: smooth; /* Faz o scrool ser suave*/
 }
 
 header {
-    background-image: url("/img/Fundo\ Limpo\ Website\ Resgate\ Verde.jpg");
+    background-image: url("/img/fundo\ principal.jpg");
     display:flex;
-    background-color: rgba(36, 170, 67, 0.426);
     background-size: cover;
     width: 100%;
     height: 100vh;
@@ -80,21 +79,89 @@ button:hover {
 .inicio_empresa {
     color:rgb(0, 0, 0);
     position: absolute;
+    background-position: 50%;
     top:35%;
-    left:40%;
+    left:30%;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 4vmin;
+    text-wrap: balance;
+    line-height: 1.0;
     text-align: center;
 }
 
 .sobre_empresa{
     height: 100vh;
+    background-size: cover; /*Ajusta a imagem para cobrir 100% da altura e largura*/
     display: flex;
-    background-color: RED;
+    
 }
 
-.parceiros_empresa{
+.card-img1 {
     height: 100vh;
+    width: 50%;
+    background-size: cover;
+    background-image: url("/img/fundo\ do\ sobre.jpg");
+
+}
+
+.card-img2 {
+    height: 100dvh;
+    width: 50%;
+    background-size: cover;
+    background-image: url("/img/Fundo\ Resgate\ Verde\ -\ Círculos\ Sustentáveis.jpg");
+    display: block;
+    padding: 20px;
+}
+
+.button_quem_somos{
+    width: 100dvh;
+    height: 80px;
+    display: flex;
+    text-decoration: none;
+    color:black;
+    justify-content: center;
+}
+
+.logo_quem_somos {
+    justify-content: center;
+    width: 280px;
+    height: 280px;
+    margin-left:300px;
+}
+
+p {
+    font-size: 25px;
+    text-transform: uppercase;
+    z-index: 100px;
+    padding:0px 40px;
+}
+
+.quem_somos_titulo {
+    color:rgb(3, 59, 3);
+    height: 100px;
+    width: 550px;
+    margin: 0 auto;
+    font-size: 80px;
+    font-weight: bolder;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.parceiros_empresa{
+    height: 100dvh;
     display: flex;
     background-color: rgb(17, 0, 255);
 
@@ -108,11 +175,21 @@ button:hover {
 }
 
 .contatos_empresa{
-    height: 100vh;
-    display: flex;
-    background-color: rgb(85, 255, 0);
+    height: 60dvh;
+    width: 100%;
+    background-color: rgb(27, 114, 57);
+    border-radius: 30px 30px 0px 0px;
 
 }
+
+#abaixo_do_footer {
+    height: 5dvh;
+    width: 100%;
+    background-color: greenyellow;
+    align-items: end;
+    
+}
+
 
 
 
