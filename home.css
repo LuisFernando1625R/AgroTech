@@ -12,12 +12,6 @@
     font-size: 25px;               /* Tamanho da fonte maior para destaque */
 }
 
-/* Estilo do link dentro do botão */
-button a {
-    text-decoration: none;   /* Remove o sublinhado padrão dos links */
-    color: white;            /* Deixa o texto branco */
-}
-
 /* ---------- SEÇÃO 1 (FUNDO PRINCIPAL) ---------- */
 .section_1 {
     background-image: url("/img/fundo_1 - Principal.jpg");  /* Define a imagem de fundo */
