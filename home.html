@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="home.css">
+    <title>Resgate Verde</title>
+</head>
+
+<body>
+    <!-- Seção principal que contém o cabeçalho e o título principal -->
+    <section class="section_1 d-block">
+        <!-- section_1 = classe personalizada definida no CSS -->
+        <!-- d-block = faz o elemento ocupar toda a largura (display: block) -->
+
+        <header>
+            <!-- Início da barra de navegação -->
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <!-- navbar = define o componente como barra de navegação do Bootstrap -->
+                <!-- navbar-expand-lg = a navbar se expande em telas grandes (lg) e colapsa em telas menores -->
+                <!-- navbar-dark = aplica cores escuras à barra e texto claro -->
+
+                <div class="container">
+                    <!-- container = centraliza e adiciona margens laterais automáticas -->
+
+                    <div class="row">
+                        <!-- row = cria uma linha dentro do grid do Bootstrap -->
+
+                        <div class="col-md-6">
+                            <!-- col-md-6 = cria uma coluna que ocupa metade da linha em telas médias ou maiores -->
+
+                            <div class="d-flex d-inline justify-content-center align-items-center">
+                                <!-- d-flex = ativa o flexbox -->
+                                <!-- d-inline = permite que o elemento se alinhe com outros na mesma linha -->
+                                <!-- justify-content-center = centraliza o conteúdo no eixo horizontal -->
+                                <!-- align-items-center = centraliza o conteúdo no eixo vertical -->
+
+                                <img src="/img/Logo_Resgate_Verde_-_Sem_Texto-sem fundo.png"
+                                     alt="logo da empresa"
+                                     class="img-fluid float-start w-50">
+                                <!-- img-fluid = torna a imagem responsiva (ajusta automaticamente o tamanho) -->
+                                <!-- float-start = posiciona a imagem à esquerda -->
+                                <!-- w-50 = define largura de 50% do elemento pai -->
+
+                                <h1>𝑅𝑒𝑠𝑔𝑎𝑡𝑒 𝑉𝑒𝑟𝑑𝑒</h1>
+                                <!-- Título da marca exibido ao lado da imagem -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botão que leva à seção de pontos de coleta -->
+                <a class="btn btn-success text-decoration-none text-dark p-1 ms-auto" href="#pontosDeColeta">
+                    <!-- btn = aplica estilo de botão -->
+                    <!-- btn-success = cor verde padrão do Bootstrap -->
+                    <!-- text-decoration-none = remove sublinhado do link -->
+                    <!-- text-dark = define texto escuro -->
+                    <!-- p-1 = adiciona padding pequeno -->
+                    <!-- ms-auto = margem automática à esquerda (empurra o botão para a direita) -->
+                    Pontos de Coleta
+                </a>
+
+                <!-- Botão "Fale Conosco" -->
+                <a class="btn btn-success text-decoration-none text-dark p-1 ms-3" href="###">
+                    <!-- ms-3 = adiciona uma pequena margem à esquerda, criando espaço entre os botões -->
+                    Fale Conosco
+                </a>
+            </nav>
+        </header>
+
+        <!-- Seção com os títulos centrais e o botão principal -->
+        <div class="d-flex flex-column justify-content-center align-items-center text-center section_1_titulo">
+            <!-- d-flex = ativa o flexbox -->
+            <!-- flex-column = organiza os itens em coluna -->
+            <!-- justify-content-center = centraliza verticalmente -->
+            <!-- align-items-center = centraliza horizontalmente -->
+            <!-- text-center = centraliza o texto -->
+            <h1 class="display-4">𝑺𝒖𝒔𝒕𝒆𝒏𝒕𝒂𝒃𝒊𝒍𝒊𝒅𝒂𝒅𝒆 𝒆 </h1>
+            <h1 class="display-4">𝑺𝒐𝒍𝒊𝒅𝒂𝒓𝒊𝒆𝒅𝒂𝒅𝒆 𝒆𝒎 𝑨𝒄̧𝒂̃𝒐 </h1>
+            <!-- display-4 = estilo de título grande do Bootstrap -->
+
+            <h6>𝖳𝗋𝖺𝗇𝗌𝖿𝗈𝗋𝗆𝖺𝗇𝖽𝗈 𝖺𝗅𝗂𝗆𝖾𝗇𝗍𝗈𝗌 𝖾 𝗍𝗋𝖺𝗇𝖿𝗈𝗋𝗆𝖺𝗇𝖽𝗈 𝗏𝗂𝖽𝖺𝗌</h6>
+            <!-- h6 = subtítulo menor -->
+
+            <button class="btn btn-custom"><a href="###">Participe</a></button>
+            <!-- btn = botão do Bootstrap -->
+            <!-- btn-custom = estilo personalizado definido no CSS -->
+        </div>
+    </section>
+
+    <!-- Início do conteúdo principal -->
+    <main>
+        <div class="justify-content-center align-items-center">
+            <!-- justify-content-center e align-items-center = centralizam conteúdo, mas precisam de display flex -->
+
+            <section class="section_2 d-block text-center" id="pontosDeColeta">
+                <!-- section_2 = classe personalizada -->
+                <!-- d-block = exibe o elemento como bloco -->
+                <!-- text-center = centraliza o texto -->
+                <!-- id = usado como destino dos links da navbar -->
+
+                <div class="section_2_titulo">
+                    <h1 class="text-center">Pontos de Coleta</h1>
+                    <!-- text-center = centraliza o texto -->
+
+                    <div class="container">
+                        <!-- container = cria uma área centralizada e com espaçamento lateral -->
+
+                        <table class="table table-striped">
+                            <!-- table = aplica estilo básico de tabela -->
+                            <!-- table-striped = adiciona listras alternadas para melhor leitura -->
+
+                            <thead>
+                                <tr>
+                                    <!-- Cabeçalho da tabela -->
+                                    <th>Estado</th>
+                                    <th>Cidade</th>
+                                    <th>Bairro</th>
+                                    <th>Rua</th>
+                                    <th>Número</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <!-- Corpo da tabela com os dados -->
+                                <tr>
+                                    <td>São Paulo</td>
+                                    <td>Taboão da Serra</td>
+                                    <td>Vila Iasi</td>
+                                    <td>Estrada Benedito Cesário de Oliveira</td>
+                                    <td>553</td>
+                                </tr>
+
+                                <tr>
+                                    <td>São Paulo</td>
+                                    <td>Taboão da Serra</td>
+                                    <td>Jardim Panorama</td>
+                                    <td>Rua Ananias Carmerindo Pires</td>
+                                    <td>40/60</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- fechamento da tabela -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
+
+
+
+</html>
