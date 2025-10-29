@@ -45,25 +45,24 @@
         </nav>
     </header>
 
-    <main class="container-fluid py-4">
-        <div class="container-fluid"></div>
-            <h3>Gestão de Solicitações</h3>
+    <main class="container-fluid px-4 py-4">
+            <h3 class="px-4 py-4">Gestão de Solicitações</h3>
         </div>
-        <div class="row g-4">
+        <div class="row">
             <div class="col-lg-8">
                 <div class="card shadow-sm">
 
                     <div class="card-header">
-                        <h5 class="mb-0">Informações dos Beneficiários</h5>
+                        <h5 class="mb-0">Inf    ormações dos Beneficiários</h5>
                     </div>
 
                     <div class="card-body">
 
                         <div class="table-responsive">
 
-                            <table class="table table-striped table-hover">
+                            <table class="table table-hover">
 
-                                <thead class="table-dark">
+                                <thead>
 
                                     <tr>
                                         <th scope="col">Nº Registro</th>
@@ -85,7 +84,7 @@
                                         <td><span class="badge bg-success">Entregue</span></td>
                                         <td class="text-center">
                                             <button class="btn btn-sm btn-outline-primary" title="Atualizar Solicitação">
-                                                <i class="bi bi-pencil-square"></i>
+                                                Atualizar
                                             </button>
                                         </td>
                                     </tr>
@@ -98,20 +97,20 @@
                                         <td><span class="badge bg-warning text-dark">Pendente</span></td>
                                         <td class="text-center">
                                             <button class="btn btn-sm btn-outline-primary" title="Atualizar Solicitação">
-                                                <i class="bi bi-pencil-square"></i>
+                                                Entregar
                                             </button>
                                         </td>
                                     </tr>
 
                                     <tr>
-                                        <td>REG00125</td>
+                                        <td>REG-00125</td>
                                         <td>29/10/2025</td>
                                         <td>FACE-ID: A4B8C1</td>
                                         <td>1234563</td>
                                         <td><span class="badge bg-danger">Cancelado</span></td>
                                         <td class="text-center">
-                                            <button class="btn btn-sm btn-outline-primary" title="Atualizar Solicitação">
-                                                <i class="bi bi-pencil-square"></i>
+                                            <button class="btn btn-sm btn-outline-primary" title="Atualizar Solicitação" disabled>
+                                                Atualizar
                                             </button>
                                         </td>
                                     </tr>
@@ -126,42 +125,45 @@
             <div class="col-lg-4">
                 <div class="card shadow-sm">
                     <div class="card-header">
-                        <h5 class="mb-0"><i class="bi bi-box-seam me-2"></i>Estoque por Ponto de Coleta</h5>
+                        <h5 class="mb-0">Estoque por Ponto de Coleta</h5>
                     </div>
                     <div class="card-body">
-                        <table class="table table-sm">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Alimento</th>
-                                    <th scope="col">Qtd.</th>
-                                    <th scope="col">Validade</th>
-                                    <th scope="col">Finalidade</th>
-                                </tr>
-                            </thead>
 
-                            <tbody>
-                                <tr>
-                                    <td>Arroz (5kg)</td>
-                                    <td>50</td>
-                                    <td>12/2026</td>
-                                    <td><span class="badge bg-info">Consumo</span></td>
-                                </tr>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Alimento</th>
+                                        <th scope="col">Qtd.</th>
+                                        <th scope="col">Validade</th>
+                                        <th scope="col">Finalidade</th>
+                                    </tr>
+                                </thead>
 
-                                <tr>
-                                    <td>Feijão (1kg)</td>
-                                    <td>85</td>
-                                    <td>10/2026</td>
-                                    <td><span class="badge bg-info">Consumo</span></td>
-                                </tr>
+                                <tbody>
+                                    <tr>
+                                        <td>Arroz (5kg)</td>
+                                        <td>50</td>
+                                        <td>12/2026</td>
+                                        <td><span class="badge bg-info">Consumo</span></td>
+                                    </tr>
 
-                                <tr>
-                                    <td>Tomate (kg)</td>
-                                    <td>15</td>
-                                    <td>30/10/2025</td>
-                                    <td><span class="badge bg-secondary">Compostagem</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                    <tr>
+                                        <td>Feijão (1kg)</td>
+                                        <td>85</td>
+                                        <td>10/2026</td>
+                                        <td><span class="badge bg-info">Consumo</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Tomate (kg)</td>
+                                        <td>15</td>
+                                        <td>30/10/2025</td>
+                                        <td><span class="badge bg-secondary">Compostagem</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
 
                     </div>
                 </div>
