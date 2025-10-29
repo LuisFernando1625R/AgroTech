@@ -14,7 +14,7 @@
 
 /* ---------- SEÇÃO 1 (FUNDO PRINCIPAL) ---------- */
 .section_1 {
-    background-image: url("/img/fundo_1 - Principal.jpg");  /* Define a imagem de fundo */
+    background-image: url("/img/fundo\ principal.jpg");  /* Define a imagem de fundo */
     display: flex;                /* Usa flexbox para alinhar conteúdo */
     background-size: cover;       /* Faz o fundo cobrir toda a área da seção */
     width: 100%;                  /* Ocupa toda a largura da tela */
@@ -47,7 +47,7 @@
 
 /* ---------- SEÇÃO 2 (PONTOS DE COLETA) ---------- */
 .section_2 {
-    background-image: url("/img/Fundo_2.jpg");  /* Define a imagem de fundo principal */
+    background-image: url("/img/fundo\ do\ sobre.jpg");  /* Define a imagem de fundo principal */
     background-size: cover;                     /* Faz a imagem cobrir toda a área */
     width: 100%;                                /* Largura total */
     height: 100vh;                              /* Altura total da janela */
@@ -56,7 +56,7 @@
 /* 🔸 Quando a tela for pequena, troca o fundo por outro */
 @media (max-width: 768px) {
     .section_2 {
-        background-image: url("/img/fundo_3.jpg"); /* Fundo alternativo para celular */
+        background-image: url("/img/Fundo\ Resgate\ Verde\ -\ Círculos\ Sustentáveis.jpg"); /* Fundo alternativo para celular */
     }
 }
 
