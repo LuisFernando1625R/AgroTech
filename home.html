@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="home.css">
     <title>Resgate Verde</title>
 </head>
@@ -40,34 +41,39 @@
                                 <!-- align-items-center = centraliza o conteúdo no eixo vertical -->
 
                                 <img src="/img/Logo_Resgate_Verde_-_Sem_Texto-removebg-preview.png"
-                                     alt="logo da empresa"
-                                     class="img-fluid float-start w-50">
+                                    alt="logo da empresa" class="img-fluid float-start w-50">
                                 <!-- img-fluid = torna a imagem responsiva (ajusta automaticamente o tamanho) -->
                                 <!-- float-start = posiciona a imagem à esquerda -->
                                 <!-- w-50 = define largura de 50% do elemento pai -->
 
-                                <h1>𝑅𝑒𝑠𝑔𝑎𝑡𝑒 𝑉𝑒𝑟𝑑𝑒</h1>
-                                <!-- Título da marca exibido ao lado da imagem -->
+                                <div>
+                                    <h1>𝑅𝑒𝑠𝑔𝑎𝑡𝑒 𝑉𝑒𝑟𝑑𝑒</h1>
+                                    <h6>Resgate, Reparta, Renove</h6>
+                                    <!-- Título da marca exibido ao lado da imagem -->
+                                </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
 
                 <!-- Botão que leva à seção de pontos de coleta -->
-                <a class="btn btn-success text-decoration-none text-dark p-1 ms-auto" href="#pontosDeColeta">
-                    <!-- btn = aplica estilo de botão -->
-                    <!-- btn-success = cor verde padrão do Bootstrap -->
-                    <!-- text-decoration-none = remove sublinhado do link -->
-                    <!-- text-dark = define texto escuro -->
-                    <!-- p-1 = adiciona padding pequeno -->
-                    <!-- ms-auto = margem automática à esquerda (empurra o botão para a direita) -->
-                    Pontos de Coleta
-                </a>
+                <button class="btn-custom_2" type="button"><a class=" text-decoration-none text-dark p-1 ms-auto"
+                        href="#pontosDeColeta">
+                        <!-- btn = aplica estilo de botão -->
+                        <!-- btn-success = cor verde padrão do Bootstrap -->
+                        <!-- text-decoration-none = remove sublinhado do link -->
+                        <!-- text-dark = define texto escuro -->
+                        <!-- p-1 = adiciona padding pequeno -->
+                        <!-- ms-auto = margem automática à esquerda (empurra o botão para a direita) -->
+                        Pontos de Coleta
+                    </a></button>
 
                 <!-- Botão "Fale Conosco" -->
-                <a class="btn btn-success text-decoration-none text-dark p-1 ms-3" href="###">
-                    <!-- ms-3 = adiciona uma pequena margem à esquerda, criando espaço entre os botões -->
-                    Fale Conosco
+                <button class="btn-custom_2 " type="button"><a class="text-decoration-none text-dark p-1 " href="###">
+                        <!-- ms-3 = adiciona uma pequena margem à esquerda, criando espaço entre os botões -->
+                        Fale Conosco
+                </button>
                 </a>
             </nav>
         </header>
@@ -86,7 +92,8 @@
             <h6>𝖳𝗋𝖺𝗇𝗌𝖿𝗈𝗋𝗆𝖺𝗇𝖽𝗈 𝖺𝗅𝗂𝗆𝖾𝗇𝗍𝗈𝗌 𝖾 𝗍𝗋𝖺𝗇𝖿𝗈𝗋𝗆𝖺𝗇𝖽𝗈 𝗏𝗂𝖽𝖺𝗌</h6>
             <!-- h6 = subtítulo menor -->
 
-            <button class="btn btn-custom"><a class="text-decoration-none text-white" href="cadastro-login.html">Participe</a></button>
+            <button class="btn btn-custom animate__animated animate__pulse animate__infinite"><a
+                    class="text-decoration-none text-white" href="cadastro-login.html">Participe</a></button>
             <!-- btn = botão do Bootstrap -->
             <!-- btn-custom = estilo personalizado definido no CSS -->
         </div>
@@ -104,7 +111,7 @@
                 <!-- id = usado como destino dos links da navbar -->
 
                 <div class="section_2_titulo">
-                    <h1 class="text-center">Pontos de Coleta</h1>
+                    <h1 class="text-center">𝑃𝑜𝑛𝑡𝑜𝑠 𝐷𝑒 𝐶𝑜𝑙𝑒𝑡𝑎</h1>
                     <!-- text-center = centraliza o texto -->
 
                     <div class="container">
@@ -114,7 +121,7 @@
                             <!-- table = aplica estilo básico de tabela -->
                             <!-- table-striped = adiciona listras alternadas para melhor leitura -->
 
-                            <thead>
+                            <thead class="bg-dark text-white">
                                 <tr>
                                     <!-- Cabeçalho da tabela -->
                                     <th>Estado</th>
@@ -127,7 +134,7 @@
 
                             <tbody>
                                 <!-- Corpo da tabela com os dados -->
-                                <tr>
+                                <tr class="bg-success">
                                     <td>São Paulo</td>
                                     <td>Taboão da Serra</td>
                                     <td>Vila Iasi</td>
@@ -135,7 +142,7 @@
                                     <td>553</td>
                                 </tr>
 
-                                <tr>
+                                <tr class="bg-success">
                                     <td>São Paulo</td>
                                     <td>Taboão da Serra</td>
                                     <td>Jardim Panorama</td>

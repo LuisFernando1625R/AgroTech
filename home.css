@@ -10,7 +10,21 @@
     padding: 15px 20px;            /* Espaçamento interno (vertical e horizontal) */
     border-radius: 20px;           /* Bordas arredondadas */
     font-size: 25px;               /* Tamanho da fonte maior para destaque */
+    
+}.btn-custom:hover {
+    animation: pulse 20s;          /* Insere uma animação de pulsação */
+    }
+
+.btn-custom_2 {
+    background-color: #227a17; /* cor verde */
+    border: 2px solid #1f6b14; /* borda personalizada */
+    color: #fff; /* texto branco */
+    padding: 5px 15px; /* tamanho do botão */
+    border-radius: 25px; /* formato arredondado estilo “pílula” */
+    transition: all 0.3s ease; /* animação suave */
+    font-weight: bold;
 }
+
 
 /* ---------- SEÇÃO 1 (FUNDO PRINCIPAL) ---------- */
 .section_1 {
