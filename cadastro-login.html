@@ -60,14 +60,15 @@
                                         </div>
 
                                         <div class="grupo">
-                                            <input type="email" id="emailCadastro" placeholder="E-mail">
+                                            <input type="email" required id="emailCadastro" placeholder="E-mail">
                                         </div>
                                         <div class="grupo">
-                                            <input type="password" id="senhaCadastro" placeholder="Senha">
+                                            <input type="password" required id="senhaCadastro" placeholder="Senha">
                                         </div>
 
                                         <div class="botoes">
-                                            <button type="button" event.preventDefault() class="cadastrar" >Cadastrar</button>
+                                            <button type="button" event.preventDefault()
+                                                class="cadastrar">Cadastrar</button>
                                         </div>
                                     </form>
                                 </div>
@@ -77,11 +78,11 @@
                                     <h2>Login</h2>
                                     <form>
                                         <div class="grupo">
-                                            <input type="email" id="emailLogin" placeholder="E-mail">
+                                            <input type="email" required id="emailLogin" placeholder="E-mail">
                                         </div>
 
                                         <div class="grupo">
-                                            <input type="password" id="emailSenha" placeholder="Senha">
+                                            <input type="password" required id="emailSenha" placeholder="Senha">
                                         </div>
                                         <div class="botoes">
                                             <button type="button" class="entrar" onclick="cadastro()">Entrar</button>
@@ -97,23 +98,25 @@
 
         <script>
 
-            function cadastro(){
-                
+            function cadastro() {
+
                 var emailCadastro = document.getElementById('emailCadastro').value;
                 var senhaCadastro = document.getElementById('senhaCadastro').value;
 
                 var emailLogin = document.getElementById('emailLogin').value;
                 var emailSenha = document.getElementById('emailSenha').value;
-            
-                if (emailLogin === emailCadastro && emailSenha == senhaCadastro ){
-                   
-                    location.href = "estoque.html"
 
-                }
-                else{
-                    alert("Senha errada, por favor tentar novamente")
-                }
+                if (emailLogin != "" && emailSenha != "") {
 
+                    if (emailLogin === emailCadastro && emailSenha === senhaCadastro) {
+                        location.href = "estoque.html";
+                    } else {
+                        alert("Senha errada, por favor tente novamente");
+                    }
+
+                } else {
+                    alert("Você ainda não tem cadastro. Por favor, cadastre-se primeiro");
+                }
             }
 
         </script>
