@@ -2,162 +2,70 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Entrega</title>
-
-    <style>
-      header {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Entrega</title>
+  <style>
+    header {
       background-color: rgb(1, 207, 1);
       background-size: cover;
-      min-height: min-content;
       height: 10vh;
-      padding:10px 30px;
-      position:relative;
-      }
-    </style>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+      padding: 10px 30px;
+    }
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body class="container-fluid p-0">
-    <header class="header d-flex align-items-center">
-        <h1 class="h3 m-0">Registro de Entrega - Cesta Familiar</h1>
-    </header>
-    <main class="m-4">
-        <form action="" method="get" id="form-entrega">
-            <div class="mb-3">
-                <label class="form-label">Número de registro do grupo</label>
-                <input type="text" id="numero-grupo" class="form-control" placeholder="Ex: FAM-1234">
-            </div>
+  <header class="header d-flex align-items-center">
+    <h1 class="h3 m-0">Registro de Entrega - Cesta Familiar</h1>
+  </header>
 
-            <div class="mb-3">
-                <label class="form-label">Responsável pela entrega</label>
-                <input type="text" id="responsavel" class="form-control" placeholder="Nome do responsável">
-            </div>
+  <main class="m-4">
+    <form id="form-entrega">
+      <div class="mb-3">
+        <label class="form-label">Número de registro do grupo</label>
+        <input type="text" id="numero-grupo" class="form-control" placeholder="Ex: FAM-1234" required>
+      </div>
 
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="checkMembros">
-                <label class="form-check-label" for="checkMembros">Adicionar membros?</label>
-            </div>
+      <div class="mb-3">
+        <label class="form-label">Responsável pela entrega</label>
+        <input type="text" id="responsavel" class="form-control" placeholder="Nome do responsável" required>
+      </div>
 
-            <div id="areaMembros" class="border rounded p-3 bg-body-secondary d-none">
-            <div class="mb-3">
-                <label class="form-label">Quantos membros deseja adicionar?</label>
-                <select id="qtdMembros" class="form-select" style="max-width:200px;">
-                    <option value="">Selecione...</option>
-                    <option value="1">1 membro</option>
-                    <option value="2">2 membros</option>
-                    <option value="3">3 membros</option>
-                    <option value="4">4 membros</option>
-                    <option value="5">5 membros</option>
-                    <option value="6">6 membros</option>
-                    <option value="7">7 membros</option>
-                    <option value="8">8 membros</option>
-                    <option value="9">9 membros</option>
-                </select>
+      <div class="mb-3">
+        <label class="form-label">Data de entrega</label>
+        <input type="date" id="data-entrega" class="form-control" required>
+      </div>
 
-            </div>
+      <div class="mb-3">
+        <label class="form-label">Quantidade de cestas</label>
+        <input type="number" id="qntde-cesta" class="form-control" placeholder="Ex.: 4 pessoas = 1 cesta" required>
+      </div>
 
-            <div id="listaMembros"></div>
-            </div>
-            
-            <div class="mb-3">
-                <label class="form-label">Data de entrega</label>
-                <input type="date" id="data-entrega" class="form-control">
-            </div>
+      <div class="mb-3">
+        <label class="form-label">Número de registro de entrega</label>
+        <input type="number" id="numero-entrega" class="form-control" required>
+      </div>
 
-            <div class="mb-3">
-                <label class="form-label">Quantidade de cestas</label>
-                <input type="number" id="qntde-cesta" class="form-control" placeholder="Ex.: 4 pessoas = 1 cesta">
-            </div>
+      <div class="mb-3">
+        <label class="form-label">Comentários</label>
+        <textarea id="comentarios" class="form-control" rows="3"></textarea>
+      </div>
 
-            <div class="mb-3">
-                <label class="form-label">Número de registro de entrega</label>
-                <input type="number" id="numero-entrega" class="form-control">
-            </div>
-            
-            <div class="text-end">
-                <button type="submit" class="btn btn-success">Confirmar registro de entrega</button>
-            </div>
-        </form>
-    </main>
-    <footer></footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-    const checkMembros = document.getElementById('checkMembros');
-    const areaMembros = document.getElementById('areaMembros');
-    const qtdMembros = document.getElementById('qtdMembros');
-    const listaMembros = document.getElementById('listaMembros');
 
-    checkMembros.addEventListener('change', () => {
-      const ativo = checkMembros.checked;
-      areaMembros.classList.toggle('d-none', !ativo);
-      if (!ativo) {
-        qtdMembros.value = "";
-        listaMembros.innerHTML = "";
-      }
-    });
+      <div class="text-end">
+        <button type="submit" class="btn btn-success">Confirmar registro de entrega</button>
+      </div>
+    </form>
+  </main>
 
-    qtdMembros.addEventListener('change', () => {
-      listaMembros.innerHTML = "";
-      const qtd = parseInt(qtdMembros.value);
-      if (isNaN(qtd)) return;
-
-      for (let i = 1; i <= qtd; i++) {
-        const bloco = document.createElement('div');
-        bloco.className = "membro border rounded p-3 mb-3 bg-white";
-
-        bloco.innerHTML = `
-          <h6 class="mb-3">Membro ${i}</h6>
-          <div class="row g-3">
-            <div class="col-md-6">
-              <label class="form-label">Nome</label>
-              <input type="text" class="form-control campoObrigatorio" name="nome[]" required>
-            </div>
-            <div class="col-md-6">
-              <label class="form-label">Tipo de identificador</label>
-              <select class="form-select tipoIdentificador" name="tipo[]" required>
-                <option value="">Selecione...</option>
-                <option value="cpf">CPF</option>
-                <option value="rg">RG</option>
-                <option value="outro">Outro</option>
-              </select>
-            </div>
-            <div class="col-md-12">
-              <label class="form-label campoLabel">Identificador</label>
-              <input type="text" class="form-control campoIdentificador" name="identificador[]" required>
-            </div>
-          </div>
-        `;
-        listaMembros.appendChild(bloco);
-      }
-    });
-    document.addEventListener('change', (e) => {
-      if (e.target.classList.contains('tipoIdentificador')) {
-        const bloco = e.target.closest('.membro');
-        const campo = bloco.querySelector('.campoIdentificador');
-        const label = bloco.querySelector('.campoLabel');
-        const valor = e.target.value;
-
-        if (valor === 'outro') {
-          const novo = document.createElement('input');
-          novo.type = 'file';
-          novo.name = 'identificador[]';
-          novo.className = 'form-control campoIdentificador';
-          novo.required = true;
-          campo.replaceWith(novo);
-          label.textContent = "Foto (imagem)";
-        } else {
-          const novo = document.createElement('input');
-          novo.type = 'text';
-          novo.name = 'identificador[]';
-          novo.className = 'form-control campoIdentificador';
-          novo.required = true;
-          campo.replaceWith(novo);
-          label.textContent = "Número do identificador";
-        }
-      }
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('form-entrega').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Registro de entrega realizado com sucesso!!!');
+      window.location.href = "estoque.html";
     });
   </script>
 </body>
