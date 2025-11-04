@@ -1,0 +1,268 @@
+/* ================== RESET E CONFIGURAÇÕES GERAIS ================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-y: scroll;
+  background-color: #faf9fa !important;
+}
+
+/* ================== BOTÕES PERSONALIZADOS ================== */
+.btn-custom {
+  border: 2px solid #227a17;
+  background-color: #227a17;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  height: 30px;
+  margin-top: 25px;
+  padding: 15px 20px;
+  border-radius: 20px;
+  font-size: 25px;
+}
+
+.btn-custom:hover {
+  animation: pulse 20s;
+}
+
+.btn-custom_2 {
+  background-color: #227a17;
+  border: 2px solid #1f6b14;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.btn-custom_2:hover {
+  background-color: #1a5f11;
+  color: #fff;
+}
+
+.btn-success {
+  background-color: #227a17;
+  border: 1px solid #1f6b14;
+}
+
+.btn-success:hover {
+  background-color: #1b5f13;
+}
+
+.btn-outline-secondary {
+  border-radius: 25px;
+}
+
+/* ================== CABEÇALHO ================== */
+.header {
+  background-color: rgb(1, 207, 1);
+  display: flex;
+  background-size: cover;
+  width: 100%;
+  height: 10vh;
+  padding: 10px 50px;
+  position: relative;
+  text-shadow: 20px;
+}
+
+/* ================== SEÇÃO 1 ================== */
+.section_1 {
+  background-image: url("/img/fundo principal.jpg");
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px 50px;
+  position: relative;
+}
+
+.section_1_titulo {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  font-weight: bold;
+  font-size: 4vmin;
+  text-wrap: balance;
+  line-height: 1.0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .section_1_titulo {
+    top: 35%;
+    left: 10%;
+  }
+}
+
+/* ================== SEÇÃO 2 ================== */
+.section_2 {
+  background-image: url("/img/fundo do sobre.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .section_2 {
+    background-image: url("/img/Fundo Resgate Verde - Círculos Sustentáveis.jpg");
+  }
+}
+
+.section_2_titulo {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 125%;
+  left: 55%;
+  font-size: medium;
+}
+
+@media (max-width: 768px) {
+  .section_2_titulo {
+    top: 125%;
+    left: 10%;
+  }
+}
+
+/* ================== FORMULÁRIO DE CONTATO ================== */
+.form-container {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(6px);
+  border: 2px solid #227a17;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 600px;
+  margin: 100px auto 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1f6b14;
+  font-weight: bold;
+}
+
+.form-control {
+  border-radius: 15px;
+  border: 1px solid #227a17;
+}
+
+#msgSucesso {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+  color: #1f6b14;
+  font-weight: bold;
+}
+
+/* ================== ÁREA DE LOGIN / CADASTRO ================== */
+.logo_empresa {
+  width: 130px;
+  height: 130px;
+}
+
+.titulos_empresa {
+  font-size: 25px;
+  margin: 20px 1px;
+  height: 30px;
+}
+
+.menu_empresa {
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 35px;
+  margin-right: 100px;
+  font-size: 25px;
+  font-weight: bold;
+  height: 30px;
+}
+
+.menu_empresa a {
+  text-decoration: none;
+  color: black;
+  margin-left: 20px;
+}
+
+.top {
+  margin-top: 100px;
+}
+
+.fundo-branco,
+.fundo-branco2 {
+  background-color: #fff;
+  border: 1px solid rgb(238, 238, 238);
+  border-radius: 10px;
+  padding: 50px;
+}
+
+.fundo-branco h2,
+.fundo-branco2 h2 {
+  margin-bottom: 20px;
+}
+
+.grupo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.fundo-branco button.cadastrar {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.fundo-branco2 button.entrar {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.fundo-branco2 button.cad {
+  background-color: #727272;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.botoes {
+  display: grid;
+}
