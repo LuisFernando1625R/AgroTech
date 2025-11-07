@@ -76,7 +76,7 @@ body {
 
 /* ================== SEÇÃO 1 ================== */
 .section_1 {
-  background-image: url("/img/fundo principal.jpg");
+  background-image: url("/src/img/fundo\ principal.jpg");
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -108,7 +108,7 @@ body {
 
 /* ================== SEÇÃO 2 ================== */
 .section_2 {
-  background-image: url("/img/fundo do sobre.jpg");
+  background-image: url("/src/img/fundo do sobre.jpg");
   background-size: cover;
   width: 100%;
   height: 100vh;
@@ -116,7 +116,7 @@ body {
 
 @media (max-width: 768px) {
   .section_2 {
-    background-image: url("/img/Fundo Resgate Verde - Círculos Sustentáveis.jpg");
+    background-image: url("/src/img/Fundo Resgate Verde - Círculos Sustentáveis.jpg");
   }
 }
 
