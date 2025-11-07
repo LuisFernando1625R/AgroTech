@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estoque e Operações</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <meta charset=" UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estoque e Operações</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+</script>
 </head>
+
 <body>
 
-    <div id="alertPlaceHolder"></div>   
+    <div id="alertPlaceHolder"></div>
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
             <div class="container-fluid">
 
-                <a class="navbar-brand" href="home.html"><img class="" src="/IMG/Logo_Resgate_Verde_-_Sem_Texto-removebg-preview.png" alt="Logo da plataforma Resgate Verde. Ilustração de uma sexta de comida com pães e frutas e o símbolo de reciclagem." width=50 height=50>Resgate Verde</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="index.html"><img class=""
+                        src="/img/Logo_Resgate_Verde_-_Sem_Texto-removebg-preview.png"
+                        alt="Logo da plataforma Resgate Verde. Ilustração de uma sexta de comida com pães e frutas e o símbolo de reciclagem."
+                        width=50 height=50>Resgate Verde</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -27,15 +35,15 @@
                     <ul class="navbar-nav ms-auto">
 
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../HTML/index.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="../HTML/registroEntrega.html">Registro de Entregas</a>
+                            <a class="nav-link" href="registro-entrega.html">Registro de Entregas</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="../HTML/faleConosco.html">Fale conosco</a>
+                            <a class="nav-link" href="fale-conosco.html">Fale conosco</a>
                         </li>
 
                     </ul>
@@ -47,8 +55,9 @@
 
     <main class="container-fluid py-4">
         <div class="container-fluid"></div>
-            <h3>Gestão de Solicitações</h3>
-            <p>Aqui você pode visualizar e editar todas as solicitações, assim como visualizar informações claras de quantidades disponíveis em todos os Pontos de Coleta cadastrados.</p>
+        <h3>Gestão de Solicitações</h3>
+        <p>Aqui você pode visualizar e editar todas as solicitações, assim como visualizar informações claras de
+            quantidades disponíveis em todos os Pontos de Coleta cadastrados.</p>
         </div>
         <div class="row g-4">
             <div class="col-sm-8">
@@ -86,7 +95,8 @@
                                         <td>1234561</td>
                                         <td><span class="badge bg-success">Entregue</span></td>
                                         <td class="text-center">
-                                            <button class="btn btn-sm btn-outline-secondary" title="Atualizar Solicitação">
+                                            <button class="btn btn-sm btn-outline-secondary"
+                                                title="Atualizar Solicitação">
                                                 <i class="bi bi-pencil-square"></i>
                                                 Editar
                                             </button>
@@ -100,7 +110,8 @@
                                         <td>1234561</td>
                                         <td><span class="badge bg-warning text-dark">Pendente</span></td>
                                         <td class="text-center">
-                                            <button class="btn btn-sm btn-outline-secondary" title="Atualizar Solicitação">
+                                            <button class="btn btn-sm btn-outline-secondary"
+                                                title="Atualizar Solicitação">
                                                 <i class="bi bi-pencil-square"></i>
                                                 Editar
                                             </button>
@@ -114,7 +125,8 @@
                                         <td>1234563</td>
                                         <td><span class="badge bg-danger">Cancelado</span></td>
                                         <td class="text-center">
-                                            <button class="btn btn-sm btn-outline-secondary" title="Atualizar Solicitação">
+                                            <button class="btn btn-sm btn-outline-secondary"
+                                                title="Atualizar Solicitação">
                                                 <i class="bi bi-pencil-square"></i>
                                                 Editar
                                             </button>
@@ -218,7 +230,9 @@
                 }
 
                 statusModal.hide();
-                mostrarAlerta(`<strong>Sucesso!</strong> A solicitação foi atualizada para "${novoStatus}".`, 'success');
+                mostrarAlerta(
+                    `<strong>Sucesso!</strong> A solicitação foi atualizada para "${novoStatus}".`,
+                    'success');
                 currentRowElement = null;
             });
 
@@ -248,9 +262,9 @@
                 </div>
 
                 <div class="modal-body">
-                
+
                     <p>Selecione o novo status para esta solicitação.</p>
-                    
+
                     <div class="mb-3">
                         <label for="selectStatus" class="form-label">Novo Status:</label>
                         <select class="form-select" id="selectStatus">
@@ -271,4 +285,5 @@
     </div>
 
 </body>
+
 </html>
