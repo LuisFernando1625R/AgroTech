@@ -1,289 +1,178 @@
 <!DOCTYPE html>
-<html lang="pt-br>
+<html lang="pt-br">
 <head>
-    <meta charset=" UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Estoque e Operações</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
-</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque e Operações</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+    </script>
 </head>
 
 <body>
 
-    <div id="alertPlaceHolder"></div>
+        <div id="alertPlaceHolder"></div>
 
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
 
-            <div class="container-fluid">
+                <div class="container-fluid">
 
-                <a class="navbar-brand" href="index.html"><img class=""
-                        src="/src/img/Logo_Resgate_Verde_-_Sem_Texto-removebg-preview.png"
-                        alt="Logo da plataforma Resgate Verde. Ilustração de uma sexta de comida com pães e frutas e o símbolo de reciclagem."
-                        width=50 height=50>Resgate Verde</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                    <a class="navbar-brand" href="index.html"><img class=""
+                            src="./assets/images/Logo_Resgate_Verde_-_Sem_Texto-removebg-preview.png"
+                            alt="Logo da plataforma Resgate Verde. Ilustração de uma sexta de comida com pães e frutas e o símbolo de reciclagem."
+                            width=50 height=50>Resgate Verde</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
 
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="registro-entrega.html">Registro de Entregas</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="registro-entrega.html">Registro de Entregas</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="fale-conosco.html">Fale conosco</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="fale-conosco.html">Fale conosco</a>
+                            </li>
 
-                    </ul>
-                </div>
-            </div>
-
-        </nav>
-    </header>
-
-    <main class="container-fluid py-4">
-        <div class="container-fluid"></div>
-        <h3>Gestão de Solicitações</h3>
-        <p>Aqui você pode visualizar e editar todas as solicitações, assim como visualizar informações claras de
-            quantidades disponíveis em todos os Pontos de Coleta cadastrados.</p>
-        </div>
-        <div class="row g-4">
-            <div class="col-sm-8">
-                <div class="card shadow-sm">
-
-                    <div class="card-header">
-                        <h5 class="mb-0">Histórico de Solicitações</h5>
+                        </ul>
                     </div>
+                </div>
 
-                    <div class="card-body">
+            </nav>
+        </header>
 
-                        <div class="table-responsive">
+        <main class="container-fluid py-4 col-md-10">
+            <div class="container-fluid"></div>
+            <h3>Gestão de Solicitações</h3>
+            <p>Aqui você pode visualizar e editar todas as solicitações, assim como visualizar informações claras de
+                quantidades disponíveis em todos os Pontos de Coleta cadastrados.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-sm-8">
+                    <div class="card shadow-sm">
 
-                            <table class="table table-striped">
+                        <div class="card-header">
+                            <h5 class="mb-0">Histórico de Solicitações</h5>
+                        </div>
 
-                                <thead>
+                        <div class="card-body">
 
-                                    <tr>
-                                        <th scope="col">Nº Registro</th>
-                                        <th scope="col">Data da Solicitação</th>
-                                        <th scope="col">Identificação (CPF/RG/Facial)</th>
-                                        <th scope="col">CAD Único</th>
-                                        <th scope="col">Situação da Entrega</th>
-                                        <th scope="col" class="text-center">Ações</th>
-                                    </tr>
+                            <div class="table-responsive">
 
-                                </thead>
+                                <table class="table table-striped">
 
-                                <tbody>
+                                    <thead>
 
-                                    <tr>
-                                        <td>REG-00123</td>
-                                        <td>28/10/2025</td>
-                                        <td>123.456.789-00</td>
-                                        <td>1234561</td>
-                                        <td><span class="badge bg-success">Entregue</span></td>
-                                        <td class="text-center">
-                                            <button class="btn btn-sm btn-outline-secondary"
-                                                title="Atualizar Solicitação">
-                                                <i class="bi bi-pencil-square"></i>
-                                                Editar
-                                            </button>
-                                        </td>
-                                    </tr>
+                                        <tr>
+                                            <th scope="col">Nº Registro</th>
+                                            <th scope="col">Data da Solicitação</th>
+                                            <th scope="col">Identificação (CPF/RG/Facial)</th>
+                                            <th scope="col">CAD Único</th>
+                                            <th scope="col">Situação da Entrega</th>
+                                            <th scope="col" class="text-center">Ações</th>
+                                        </tr>
 
-                                    <tr>
-                                        <td>REG-00124</td>
-                                        <td>29/10/2025</td>
-                                        <td>12.345.672</td>
-                                        <td>1234561</td>
-                                        <td><span class="badge bg-warning text-dark">Pendente</span></td>
-                                        <td class="text-center">
-                                            <button class="btn btn-sm btn-outline-secondary"
-                                                title="Atualizar Solicitação">
-                                                <i class="bi bi-pencil-square"></i>
-                                                Editar
-                                            </button>
-                                        </td>
-                                    </tr>
+                                    </thead>
 
-                                    <tr>
-                                        <td>REG-00125</td>
-                                        <td>29/10/2025</td>
-                                        <td>FACE-ID: A4B8C1</td>
-                                        <td>1234563</td>
-                                        <td><span class="badge bg-danger">Cancelado</span></td>
-                                        <td class="text-center">
-                                            <button class="btn btn-sm btn-outline-secondary"
-                                                title="Atualizar Solicitação">
-                                                <i class="bi bi-pencil-square"></i>
-                                                Editar
-                                            </button>
-                                        </td>
-                                    </tr>
+                                    <tbody>
 
-                                </tbody>
-                            </table>
+                                        <tr>
+                                            <td>REG-00123</td>
+                                            <td>28/10/2025</td>
+                                            <td>123.456.789-00</td>
+                                            <td>1234561</td>
+                                            <td><span class="badge bg-success">Entregue</span></td>
+                                            <td class="text-center">
+                                            <a href="registro-entrega.html"><i class="bi bi-pencil-square"></i></a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>REG-00124</td>
+                                            <td>29/10/2025</td>
+                                            <td>12.345.672</td>
+                                            <td>1234561</td>
+                                            <td><span class="badge bg-warning text-dark">Pendente</span></td>
+                                            <td class="text-center">
+                                            <a href="registro-entrega.html"><i class="bi bi-pencil-square"></i></a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>REG-00125</td>
+                                            <td>29/10/2025</td>
+                                            <td>FACE-ID: A4B8C1</td>
+                                            <td>1234563</td>
+                                            <td><span class="badge bg-danger">Cancelado</span></td>
+                                            <td class="text-center">
+                                            <a href="registro-entrega.html"><i class="bi bi-pencil-square"></i></a>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-sm-4">
-                <div class="card shadow-sm">
-                    <div class="card-header">
-                        <h5 class="mb-0"><i class="bi bi-box-seam me-2"></i>Estoque por Ponto de Coleta</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-sm table-striped">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Alimento</th>
-                                        <th scope="col">Qtd.</th>
-                                        <th scope="col">Validade</th>
-                                        <th scope="col">Finalidade</th>
-                                    </tr>
-                                </thead>
+                <div class="col-sm-4">
+                    <div class="card shadow-sm">
+                        <div class="card-header">
+                            <h5 class="mb-0"><i class="bi bi-box-seam me-2"></i>Estoque por Ponto de Coleta</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-sm table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Alimento</th>
+                                            <th scope="col">Qtd.</th>
+                                            <th scope="col">Validade</th>
+                                            <th scope="col">Finalidade</th>
+                                        </tr>
+                                    </thead>
 
-                                <tbody>
-                                    <tr>
-                                        <td>Arroz (5kg)</td>
-                                        <td>50</td>
-                                        <td>12/2026</td>
-                                        <td><span class="badge bg-info">Consumo</span></td>
-                                    </tr>
+                                    <tbody>
+                                        <tr>
+                                            <td>Arroz (5kg)</td>
+                                            <td>50</td>
+                                            <td>12/2026</td>
+                                            <td><span class="badge bg-info">Consumo</span></td>
+                                        </tr>
 
-                                    <tr>
-                                        <td>Feijão (1kg)</td>
-                                        <td>85</td>
-                                        <td>10/2026</td>
-                                        <td><span class="badge bg-info">Consumo</span></td>
-                                    </tr>
+                                        <tr>
+                                            <td>Feijão (1kg)</td>
+                                            <td>85</td>
+                                            <td>10/2026</td>
+                                            <td><span class="badge bg-info">Consumo</span></td>
+                                        </tr>
 
-                                    <tr>
-                                        <td>Tomate (kg)</td>
-                                        <td>15</td>
-                                        <td>30/10/2025</td>
-                                        <td><span class="badge bg-secondary">Compostagem</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                        <tr>
+                                            <td>Tomate (kg)</td>
+                                            <td>15</td>
+                                            <td>30/10/2025</td>
+                                            <td><span class="badge bg-secondary">Compostagem</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-    </main>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            console.log('Página carregada!');
-            const alertPlaceHolder = document.getElementById('alertPlaceHolder');
-
-            const mostrarAlerta = (mensagem, tipo) => {
-                alertPlaceHolder.innerHTML = '';
-
-                const wrapper = document.createElement('div');
-
-                wrapper.innerHTML = [
-                    `<div class="alert alert-${tipo} alert-dismissible fade show" role="alert">`,
-                    `   <div>${mensagem}</div>`,
-                    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-                    '</div>'
-                ].join('');
-
-                alertPlaceHolder.appendChild(wrapper);
-            }
-
-            const statusModalElement = document.getElementById('modalAtualizarStatus');
-            const statusModal = new bootstrap.Modal(statusModalElement);
-            const updateButtons = document.querySelectorAll('button[title="Atualizar Solicitação"]');
-            const btnSalvar = document.getElementById('btnSalvarModal');
-
-            let currentRowElement = null;
-
-            updateButtons.forEach(button => {
-                button.addEventListener('click', (event) => {
-                    currentRowElement = event.target.closest('tr');
-                    statusModal.show();
-                });
-            });
-
-            btnSalvar.addEventListener('click', () => {
-                const novoStatus = document.getElementById('selectStatus').value;
-                if (currentRowElement) {
-                    const statusCell = currentRowElement.querySelector('td:nth-child(5)');
-                    if (statusCell) {
-                        statusCell.innerHTML = getStatusBadge(novoStatus);
-                    }
-                }
-
-                statusModal.hide();
-                mostrarAlerta(
-                    `<strong>Sucesso!</strong> A solicitação foi atualizada para "${novoStatus}".`,
-                    'success');
-                currentRowElement = null;
-            });
-
-            function getStatusBadge(status) {
-                switch (status) {
-                    case 'Entregue':
-                        return '<span class="badge bg-success">Entregue</span>';
-                    case 'Cancelado':
-                        return '<span class="badge bg-danger">Cancelado</span>';
-                    case 'Pendente':
-                    default:
-                        return '<span class="badge bg-warning text-dark">Pendente</span>';
-                }
-            }
-
-        });
-    </script>
-
-    <div class="modal fade" id="modalAtualizarStatus" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-
-            <div class="modal-content">
-
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalLabel">Atualizar Status da Entrega</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-
-                <div class="modal-body">
-
-                    <p>Selecione o novo status para esta solicitação.</p>
-
-                    <div class="mb-3">
-                        <label for="selectStatus" class="form-label">Novo Status:</label>
-                        <select class="form-select" id="selectStatus">
-                            <option value="Pendente">Pendente</option>
-                            <option value="Entregue">Entregue</option>
-                            <option value="Cancelado">Cancelado</option>
-                        </select>
-                    </div>
-
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary" id="btnSalvarModal">Salvar Mudanças</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
+        </main>
 </body>
 
 </html>
