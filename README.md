@@ -59,3 +59,5 @@ Tipo de alimento, quantidade, validade e status (para consumo / para compostagem
 4. [Validar] Mensagem
 5. Botões/Ações: [1] Limpar formulário, [2][Validar] Enviar
 6. Mensagem de confirmação de envio
+
+

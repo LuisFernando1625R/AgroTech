@@ -58,19 +58,19 @@
                                     <h2>Cadastro</h2>
                                     <form>
                                         <div class="grupo">
-                                            <input type="text" id="nome" placeholder="Nome da ONG/Escola">
+                                            <input type="text" required id="nome" placeholder="Nome da ONG/Escola">
                                         </div>
 
                                         <div class="grupo">
-                                            <input type="text" id="cpf" placeholder="CNPJ ou CPF">
+                                            <input type="text" required id="cpf" placeholder="CNPJ ou CPF">
                                         </div>
 
                                         <div class="grupo">
-                                            <input type="text" id="tel" placeholder="Telefone de contato">
+                                            <input type="text" required id="tel" placeholder="Telefone de contato">
                                         </div>
 
                                         <div class="grupo">
-                                            <input type="text" id="nomeResponsavel" placeholder="Nome do Responsável">
+                                            <input type="text"  required id="nomeResponsavel" placeholder="Nome do Responsável">
                                         </div>
 
                                         <div class="grupo">
@@ -118,17 +118,18 @@
 
                 var emailLogin = document.getElementById('emailLogin').value;
                 var emailSenha = document.getElementById('emailSenha').value;
+                
 
                 if (emailLogin != "" && emailSenha != "") {
 
                     if (emailLogin === emailCadastro && emailSenha === senhaCadastro) {
                         location.href = "estoque.html";
                     } else {
-                        alert("Senha errada, por favor tente novamente");
+                        alert("Senha ou Email errado, por favor tente novamente!");
                     }
 
                 } else {
-                    alert("Você ainda não tem cadastro. Por favor, cadastre-se primeiro");
+                    alert("Você ainda não tem cadastro. Por favor, cadastre-se primeiro!");
                 }
             }
         </script>
