@@ -81,16 +81,16 @@
         <section class="section-2" id="pontos-de-coleta">
             <div class="container">
                 <h1 class="text-center">𝑃𝑜𝑛𝑡𝑜𝑠 𝐷𝑒 𝐶𝑜𝑙𝑒𝑡𝑎</h1>
-                <div class="card-group  pontos">
-
+                <div class="card-group pontos" data-aos="fade-up">
                     <div class="card">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Rua+das+Flores+120+Bairro+Primavera"
-                            target="_blank">
-                            <img src="/img/localizacao1.jpg" class="img-fluid rounded shadow-sm" alt="Mapa Primavera" />
-                        </a>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.715676450626!2d-46.438865!3d-23.582215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6743d9a95fb7%3A0x57b364a7e6c1b9c!2sR.%20Flores%20da%20Primavera%2C%20638%20-%20Conj.%20Promorar%20Rio%20Claro%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2008395-325!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
+                            width="100%" height="350" allowfullscreen="" loading="lazy">
+                        </iframe>
                         <div class="card-body">
                             <h5 class="card-titulo">Centro Comunitário Primavera</h5>
-                            <p class="card-text">R. Flores da Primavera, 638 - Conj. Promorar Rio Claro, São Paulo - SP, 08395-325</p>
+                            <p class="card-text">R. Flores da Primavera, 638 - Conj. Promorar Rio Claro, São Paulo - SP,
+                                08395-325</p>
                         </div>
                         <div class="card-footer">
                             <span class="badge bg-success">Aberto</span>
@@ -98,9 +98,10 @@
                     </div>
 
                     <div class="card">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Av+Central+455+Centro" target="_blank">
-                            <img src="/img/localizacao2.jpg" class="img-fluid rounded shadow-sm" alt="Mapa Ginásio" />
-                        </a>
+                        <iframe
+                            src="https://www.google.com/maps?q=Avenida+dos+Metalúrgicos+1262+Cidade+Tiradentes+São+Paulo&output=embed"
+                            width="100%" height="350" allowfullscreen="" loading="lazy">
+                        </iframe>
                         <div class="card-body">
                             <h5 class="card-titulo">Ginásio Municipal</h5>
                             <p class="card-text">Avenida dos Metalúrgicos, 1262 — Cidade Tiradentes — CEP 08471-000</p>
@@ -111,11 +112,10 @@
                     </div>
 
                     <div class="card">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Rua+Bela+Vista+98+Sao+Jorge"
-                            target="_blank">
-                            <img src="/img/localizacao3.jpg"
-                                class="img-fluid rounded shadow-sm" alt="Mapa Igreja" />
-                        </a>
+                        <iframe
+                            src="https://www.google.com/maps?q=R.+Bela+Vista+98+Alto+da+Boa+Vista+São+Paulo&output=embed"
+                            width="100%" height="350" allowfullscreen="" loading="lazy">
+                        </iframe>
                         <div class="card-body">
                             <h5 class="card-titulo">Boa Vista</h5>
                             <p class="card-text">R. Bela Vista, 98 - Alto da Boa Vista, São Paulo - SP, 04709-001</p>
@@ -129,5 +129,13 @@
         </section>
     </main>
 </body>
+
+<script>
+    const lang = navigator.language || navigator.userLanguage;
+
+    if (lang !== "pt-BR" && lang !== "pt") {
+        window.location.href = "/en/index.html";
+    }
+</script>
 
 </html>
