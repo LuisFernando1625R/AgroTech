@@ -118,6 +118,19 @@ body {
     align-items: center;
 }
 
+/* Quando o mouse está no container */
+.pontos:hover .card {
+    filter: blur(4px);
+    transition: 0.3s ease;
+}
+
+/* Quando o mouse está sobre um card específico */
+.pontos .card:hover {
+    filter: blur(0px);
+    transform: scale(1.02);
+    z-index: 10;
+}
+
 /*
 @media (max-width: 768px) {
   .section_2 {
