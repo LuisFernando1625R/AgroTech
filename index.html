@@ -18,54 +18,50 @@
             <header>
                 <nav class="navbar navbar-expand-lg navbar-dark">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="d-flex d-inline justify-content-center align-items-center">
-                                    <img src="/img/logo-resgate-verde-sem-Texto-removebg.png" alt="logo da empresa"
-                                        class="img-fluid float-start w-50">
 
-                                    <div>
-                                        <h1>𝑅𝑒𝑠𝑔𝑎𝑡𝑒 𝑉𝑒𝑟𝑑𝑒</h1>
-                                        <h6>Resgate, Reparta, Renove</h6>
-                                    </div>
-                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                                        aria-label="Toggle navigation">
-                                        <span class="navbar-toggler-icon "></span>
-                                    </button>
-                                </div>
+                        <!-- LOGO + TÍTULO -->
+                        <a class="navbar-brand d-flex align-items-center" href="index.html">
+                            <img src="/img/logo-resgate-verde-sem-Texto-removebg.png" alt="logo da empresa"
+                                class="img-fluid" style="width: 60px;">
+                            <div class="ms-2 ">
+                                <h1 class="d-none d-md-block titulo-subtitulo">𝑅𝑒𝑠𝑔𝑎𝑡𝑒 𝑉𝑒𝑟𝑑𝑒</h1>
+                                <h6 class="d-none d-md-block titulo-subtitulo">Resgate, Reparta, Renove</h6>
                             </div>
-                        </div>
-                    </div>
+                        </a>
+
+                        <!-- HAMBÚRGUER -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
 
 
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto">
 
-                            <li class="nav-item">
-                                <button class="btn-custom_2" type="button"><a
-                                        class=" text-decoration-none text-light p-1 ms-auto" href="#pontos-de-coleta">
+                        <!-- LINKS DO MENU -->
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ms-auto text-center">
+
+                                <li class="nav-item my-2">
+                                    <a class="btn-custom_2 nav-link text-light p-2" href="#pontos-de-coleta">
                                         Pontos de Coleta
-                                    </a></button>
-                            </li>
+                                    </a>
+                                </li>
 
-                            <li class="nav-item">
-                                <button class="btn-custom_2" type="button"><a
-                                        class=" text-decoration-none text-light p-1 ms-auto"
-                                        href="https://youtu.be/_S72zKrtInI" target="_blank">
+                                <li class="nav-item my-2">
+                                    <a class="btn-custom_2 nav-link text-light p-2" href="https://youtu.be/_S72zKrtInI"
+                                        target="_blank">
                                         Pitch Vídeo
-                                    </a></button>
-                            </li>
+                                    </a>
+                                </li>
 
-                            <li class="nav-item">
-                                <button class="btn-custom_2 " type="button"><a
-                                        class="text-decoration-none text-light p-1 " href="fale-conosco.html">
+                                <li class="nav-item my-2">
+                                    <a class="btn-custom_2 nav-link text-light p-2" href="fale-conosco.html">
                                         Fale Conosco
                                     </a>
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
                 </nav>
             </header>
 
@@ -129,13 +125,5 @@
         </section>
     </main>
 </body>
-
-<script>
-    const lang = navigator.language || navigator.userLanguage;
-
-    if (lang !== "pt-BR" && lang !== "pt") {
-        window.location.href = "/en/index.html";
-    }
-</script>
 
 </html>

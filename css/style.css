@@ -74,6 +74,10 @@ body {
   text-shadow: 20px;
 }
 
+.titulo-subtitulo {
+  color:black !important;
+}
+
 /* ================== SEÇÃO 1 ================== */
 .section_1 {
   background-image: url("/img/fundo-principal.jpg");
@@ -88,7 +92,7 @@ body {
 }
 
 .section_1_titulo {
-  color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0) !important;
   position: absolute;
   top: 35%;
   left: 35%;
@@ -105,8 +109,6 @@ body {
     left: 10%;
   }
 }
-
-
 
 
 
