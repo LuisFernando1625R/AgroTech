@@ -87,35 +87,52 @@ body {
 .section_1 {
   background-image: url("/img/fundo-principal.jpg");
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
   background-size: cover;
+  background-position: center;
   width: 100%;
   min-height: 100vh;
-  padding: 20px 50px;
+  padding: 0 20px;
   position: relative;
 }
 
 .section_1_titulo {
-  color: rgb(0, 0, 0) !important;
   position: absolute;
-  top: 35%;
-  left: 35%;
-  font-weight: bold;
+  top: 45%;         
+  left: 50%;         
+  transform: translate(-50%, -50%);
+  color: #000 !important;
   font-size: 4vmin;
+  font-weight: bold;
+  line-height: 1.2;
   text-wrap: balance;
-  line-height: 1.0;
-  text-align: center;
+  max-width: 90%;
 }
 
-@media (max-width: 768px) {
+/* Tablets */
+@media (max-width: 992px) {
   .section_1_titulo {
-    top: 35%;
-    left: 10%;
+    font-size: 5vmin;
   }
 }
 
+/* Celulares */
+@media (max-width: 768px) {
+  .section_1_titulo {
+    top: 50%;
+    font-size: 6vmin;
+  }
+}
 
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  .section_1_titulo {
+    font-size: 7vmin;
+  }
+}
 
 /* ================== SEÇÃO 2 ================== */
 .section-2 {
