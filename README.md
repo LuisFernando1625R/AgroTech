@@ -61,3 +61,24 @@ Tipo de alimento, quantidade, validade e status (para consumo / para compostagem
 6. Mensagem de confirmação de envio
 
 
+## Execução (React + Vite)
+
+1. Instale dependências:
+
+```bash
+npm install
+```
+
+2. Rode em desenvolvimento:
+
+```bash
+npm run dev
+```
+
+3. Gere build de produção:
+
+```bash
+npm run build
+```
+
+

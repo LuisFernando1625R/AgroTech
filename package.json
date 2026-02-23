@@ -1,0 +1,33 @@
+{
+  "name": "agrotech",
+  "version": "1.0.0",
+  "description": "[Tela 1] Landing page com pontos de coleta → [Tela 2] Login/Cadastro de representante de ONG’s → [Tela 3] Pilha de registros de entregas do usuário logado com dashboard de estoque e operações → [Tela 4] Tela de registro de entrega → [Tela 5] Fale conosco",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisFernando1625R/AgroTech.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuisFernando1625R/AgroTech/issues"
+  },
+  "homepage": "https://github.com/LuisFernando1625R/AgroTech#readme",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-router-dom": "^6.28.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.4",
+    "vite": "^7.3.1"
+  }
+}
