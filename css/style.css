@@ -34,19 +34,20 @@ body {
   animation: pulse 20s;
 }
 
-.btn-custom_2 {
-  background-color: #227a17;
-  border: 2px solid #1f6b14;
-  color: #fff;
-  padding: 5px 15px;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-  font-weight: bold;
+.btn-custom_2{
+  background-color:#227a17;
+  border:2px solid #1f6b14;
+  color:white;
+  padding:6px 16px;
+  border-radius:20px;
+  transition:0.3s;
+  font-weight:600;
+  font-size:14px;
 }
 
-.btn-custom_2:hover {
-  background-color: #1a5f11;
-  color: #fff;
+.btn-custom_2:hover{
+  background-color:#1a5f11;
+  transform:scale(1.05);
 }
 
 .btn-success {
@@ -81,6 +82,11 @@ body {
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
+
+.navbar{
+  padding:12px 0;
+}
+
 
 
 /* ================== SEÇÃO 1 ================== */
@@ -159,28 +165,6 @@ body {
     z-index: 10;
 }
 
-/*
-@media (max-width: 768px) {
-  .section_2 {
-    background-image: url("/img/fundo-resgate-verde-circulos-sustentaveis.jpg");
-  }
-}
-
-.section_2_titulo {
-  color: rgb(0, 0, 0);
-  position: absolute;
-  top: 125%;
-  left: 55%;
-  font-size: medium;
-}
-
-@media (max-width: 768px) {
-  .section_2_titulo {
-    top: 125%;
-    left: 1%;
-  }
-}
-*/
 
 /* ================== FORMULÁRIO DE CONTATO ================== */
 .form-container {
@@ -310,6 +294,3 @@ input {
   transition: all 0.2s ease-in-out;
 }
 
-.botoes {
-  display: grid;
-}
