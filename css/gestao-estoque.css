@@ -438,7 +438,7 @@ input[name="ponto"] {
 
 /* ========== FOOTER ========== */
 .footer {
-    background: var(--text-dark);
+    background: rgb(8, 46, 33);
     color: white;
     text-align: center;
     padding: 2rem 1rem;
