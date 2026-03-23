@@ -28,7 +28,7 @@ export function HomePage() {
                   <li className="nav-item my-2">
                     <a
                       className="btn-custom_2 nav-link text-light p-2"
-                      href="https://youtu.be/IJqhsQJ3vQU"
+                      href="https://youtu.be/51q1i9is1zg"
                       target="_blank"
                       rel="noreferrer"
                     >
