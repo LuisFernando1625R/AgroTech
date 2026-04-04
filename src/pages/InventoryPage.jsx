@@ -1,14 +1,19 @@
-import { useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
-import '../../css/gestao-estoque.css';
-import { beneficiaries, stockByPoint } from '../data/inventoryData';
+import { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
+import "../../css/gestao-estoque.css";
+import { beneficiaries, stockByPoint } from "../data/inventoryData";
+import { BrandLogo } from "../components/BrandLogo";
+import NavBarCollapse from "../components/NavBarCollapse";
+import NavItem from "../components/NavItem";
 
 export function InventoryPage() {
-  const [selectedPoint, setSelectedPoint] = useState('1');
+  const [selectedPoint, setSelectedPoint] = useState("1");
 
   const currentStock = useMemo(
-    () => stockByPoint.find((point) => point.id === selectedPoint) || stockByPoint[0],
-    [selectedPoint]
+    () =>
+      stockByPoint.find((point) => point.id === selectedPoint) ||
+      stockByPoint[0],
+    [selectedPoint],
   );
 
   return (
@@ -16,10 +21,12 @@ export function InventoryPage() {
       <header>
         <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
           <div className="container-fluid">
-            <a className="navbar-brand" href="#">
-              <img src="/img/logo-resgate-verde-sem-Texto-removebg.png" alt="Logo Gestão Social" width="50" height="50" />
-              Resgate Verde
-            </a>
+            <Link className="navbar-brand d-flex align-items-center" to="/">
+              <BrandLogo
+                titleClassName="titulo-subtitulo"
+                subtitleClassName="titulo-subtitulo"
+              />
+            </Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -31,20 +38,10 @@ export function InventoryPage() {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="collapse navbar-collapse" id="inventoryNavbar">
-              <ul className="navbar-nav ms-auto">
-                <li className="nav-item">
-                  <Link className="nav-link active" to="/">
-                    Home
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/fale-conosco">
-                    Fale conosco
-                  </Link>
-                </li>
-              </ul>
-            </div>
+            <NavBarCollapse id="inventoryNavbar">
+              <NavItem link="/">Home</NavItem>
+              <NavItem link="/fale-conosco">Fale Conosco</NavItem>
+            </NavBarCollapse>
           </div>
         </nav>
       </header>
@@ -56,13 +53,18 @@ export function InventoryPage() {
               <i className="bi bi-box-seam"></i>
               <h2>Controle de Entregas</h2>
             </div>
-            <p className="section-description">Status de entrega dos beneficiários</p>
+            <p className="section-description">
+              Status de entrega dos beneficiários
+            </p>
           </div>
 
           <div className="cards-grid">
             {beneficiaries.map((beneficiary) => (
               <div className="beneficiary-card" key={beneficiary.id}>
-                <div className="card-status-indicator" style={{ backgroundColor: beneficiary.indicator }}></div>
+                <div
+                  className="card-status-indicator"
+                  style={{ backgroundColor: beneficiary.indicator }}
+                ></div>
                 <div className="card-header">
                   <h3 className="card-name">{beneficiary.name}</h3>
                   <span className="card-registry">{beneficiary.registry}</span>
@@ -123,9 +125,10 @@ export function InventoryPage() {
                     style={
                       selectedPoint === point.id
                         ? {
-                            background: 'linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%)',
-                            color: 'white',
-                            borderColor: 'transparent',
+                            background:
+                              "linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%)",
+                            color: "white",
+                            borderColor: "transparent",
                           }
                         : undefined
                     }
@@ -142,7 +145,10 @@ export function InventoryPage() {
               <div className="tab-pane active">
                 <div className="items-list">
                   {currentStock.items.map((item) => (
-                    <div className="estoque-item" key={`${currentStock.id}-${item.id}`}>
+                    <div
+                      className="estoque-item"
+                      key={`${currentStock.id}-${item.id}`}
+                    >
                       <div className="item-info">
                         <h4 className="item-name">{item.name}</h4>
                         <p className="item-quantity">{item.quantity}</p>

@@ -1,19 +1,20 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import '../../css/style.css';
-import { BrandLogo } from '../components/BrandLogo';
-import { validateContactForm } from '../utils/validation';
+import { useState } from "react";
+import "../../css/style.css";
+import { BrandLogo } from "../components/BrandLogo";
+import NavItem from "../components/NavItem";
+import { validateContactForm } from "../utils/validation";
+import NavBarCollapse from "../components/NavBarCollapse";
 
 const initialForm = {
-  nome: '',
-  email: '',
-  telefone: '',
-  mensagem: '',
+  nome: "",
+  email: "",
+  telefone: "",
+  mensagem: "",
 };
 
 export function ContactPage() {
   const [form, setForm] = useState(initialForm);
-  const [successMessage, setSuccessMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState("");
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -35,17 +36,17 @@ export function ContactPage() {
       return;
     }
 
-    setSuccessMessage('Mensagem enviada com sucesso! 🌱');
+    setSuccessMessage("Mensagem enviada com sucesso! 🌱");
     setForm(initialForm);
 
     setTimeout(() => {
-      setSuccessMessage('');
+      setSuccessMessage("");
     }, 4000);
   }
 
   function handleReset() {
     setForm(initialForm);
-    setSuccessMessage('');
+    setSuccessMessage("");
   }
 
   return (
@@ -62,9 +63,10 @@ export function ContactPage() {
             </div>
           </div>
 
-          <Link className="btn-custom_2 text-decoration-none text-light p-2" to="/">
-            Home
-          </Link>
+          <NavBarCollapse>
+            <NavItem link="/">Home</NavItem>
+            <NavItem link="/fale-conosco">Fale Conosco</NavItem>
+          </NavBarCollapse>
         </nav>
       </header>
 
@@ -146,7 +148,10 @@ export function ContactPage() {
             </button>
           </div>
 
-          <div id="msgSucesso" style={{ display: successMessage ? 'block' : 'none' }}>
+          <div
+            id="msgSucesso"
+            style={{ display: successMessage ? "block" : "none" }}
+          >
             {successMessage}
           </div>
         </form>
