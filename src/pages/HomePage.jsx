@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import "../../css/style.css";
 import { BrandLogo } from "../components/BrandLogo/BrandLogo";
-import NavItem from "../components/NavBarItem/NavItem";
+import NavItem from "../components/NavItem/NavItem";
 import NavBarCollapse from "../components/NavBarCollapse/NavBarCollapse";
 import { collectionPoints } from "../data/collectionPoints";
-import {hero} from "../components/hero/Hero";
+import Hero from "../components/hero/Hero";
+import Toggler from "../components/toggler/toggler";
 
 export function HomePage() {
   return (
@@ -20,14 +21,7 @@ export function HomePage() {
                 />
               </Link>
 
-              <button
-                className="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#homeNav"
-              >
-                <span className="navbar-toggler-icon"></span>
-              </button>
+              <Toggler />
 
               <NavBarCollapse>
                 <NavItem link="#pontos-de-coleta">Pontos de Coleta</NavItem>
@@ -40,7 +34,7 @@ export function HomePage() {
           </nav>
         </header>
 
-        <hero />
+        <Hero />
       </section>
 
       <section className="section-2" id="pontos-de-coleta">
