@@ -4,7 +4,6 @@ import NavItem from "../components/NavItem";
 import { validateContactForm } from "../utils/validation";
 import NavBarCollapse from "../components/NavBarCollapse";
 import { Link } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 const initialForm = {
   nome: "",
