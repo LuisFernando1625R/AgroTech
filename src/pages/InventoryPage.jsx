@@ -2,7 +2,6 @@ import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import "../../css/gestao-estoque.css";
 import { beneficiaries, stockByPoint } from "../data/inventoryData";
-import { BrandLogo } from "../components/BrandLogo";
 import NavBarCollapse from "../components/NavBarCollapse";
 import NavItem from "../components/NavItem";
 
@@ -21,11 +20,14 @@ export function InventoryPage() {
       <header>
         <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
           <div className="container-fluid">
-            <Link className="navbar-brand d-flex align-items-center" to="/">
-              <BrandLogo
-                titleClassName="titulo-subtitulo"
-                subtitleClassName="titulo-subtitulo"
+            <Link className="navbar-brand" to="/">
+              <img
+                src="/img/logo-resgate-verde-sem-Texto-removebg.png"
+                alt="Logo da plataforma Resgate Verde"
+                width="50"
+                height="50"
               />
+              Resgate Verde
             </Link>
             <button
               className="navbar-toggler"

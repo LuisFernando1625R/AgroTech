@@ -1,9 +1,10 @@
 import { useState } from "react";
 import "../../css/style.css";
-import { BrandLogo } from "../components/BrandLogo";
 import NavItem from "../components/NavItem";
 import { validateContactForm } from "../utils/validation";
 import NavBarCollapse from "../components/NavBarCollapse";
+import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const initialForm = {
   nome: "",
@@ -52,21 +53,30 @@ export function ContactPage() {
   return (
     <section className="section_1 d-block">
       <header>
-        <nav className="navbar navbar-expand-lg navbar-dark">
-          <div className="container">
-            <div className="row w-100">
-              <div className="col-md-6">
-                <div className="d-flex d-inline justify-content-center align-items-center">
-                  <BrandLogo />
-                </div>
-              </div>
-            </div>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+          <div className="container-fluid">
+            <Link className="navbar-brand d-flex align-items-center" to="/">
+              <BrandLogo
+                titleClassName="titulo-subtitulo"
+                subtitleClassName="titulo-subtitulo"
+              />
+            </Link>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#inventoryNavbar"
+              aria-controls="inventoryNavbar"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <NavBarCollapse id="inventoryNavbar">
+              <NavItem link="/">Home</NavItem>
+              <NavItem link="/fale-conosco">Fale Conosco</NavItem>
+            </NavBarCollapse>
           </div>
-
-          <NavBarCollapse>
-            <NavItem link="/">Home</NavItem>
-            <NavItem link="/fale-conosco">Fale Conosco</NavItem>
-          </NavBarCollapse>
         </nav>
       </header>
 
