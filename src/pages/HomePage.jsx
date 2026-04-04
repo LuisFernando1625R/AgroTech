@@ -4,7 +4,7 @@ import { BrandLogo } from "../components/BrandLogo/BrandLogo";
 import NavItem from "../components/NavItem/NavItem";
 import NavBarCollapse from "../components/NavBarCollapse/NavBarCollapse";
 import { collectionPoints } from "../data/collectionPoints";
-import Hero from "../components/Hero/Hero";
+import Hero from "../components/hero/Hero";
 import Toggler from "../components/Toggler/Toggler";
 
 export function HomePage() {
