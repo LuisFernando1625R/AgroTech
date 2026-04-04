@@ -5,6 +5,7 @@ import NavItem from "../components/NavItem/NavItem";
 import NavBarCollapse from "../components/NavBarCollapse/NavBarCollapse";
 import { collectionPoints } from "../data/collectionPoints";
 import Hero from "../components/Hero/Hero";
+import Toggler from "../components/Toggler/Toggler";
 
 export function HomePage() {
   return (
@@ -20,14 +21,7 @@ export function HomePage() {
                 />
               </Link>
 
-              <button
-                className="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#homeNav"
-              >
-                <span className="navbar-toggler-icon"></span>
-              </button>
+              <Toggler />
 
               <NavBarCollapse>
                 <NavItem link="#pontos-de-coleta">Pontos de Coleta</NavItem>

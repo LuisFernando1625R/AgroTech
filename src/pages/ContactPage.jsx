@@ -5,6 +5,7 @@ import NavItem from "../components/NavItem/NavItem";
 import { validateContactForm } from "../utils/validation";
 import NavBarCollapse from "../components/NavBarCollapse/NavBarCollapse";
 import { Link } from "react-router-dom";
+import Toggler from "../components/Toggler/Toggler";
 
 const initialForm = {
   nome: "",
@@ -61,17 +62,7 @@ export function ContactPage() {
                 subtitleClassName="titulo-subtitulo"
               />
             </Link>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#inventoryNavbar"
-              aria-controls="inventoryNavbar"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
+            <Toggler />
             <NavBarCollapse id="inventoryNavbar">
               <NavItem link="/">Home</NavItem>
               <NavItem link="/fale-conosco">Fale Conosco</NavItem>

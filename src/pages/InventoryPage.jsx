@@ -4,8 +4,9 @@ import "../../css/gestao-estoque.css";
 import { beneficiaries, stockByPoint } from "../data/inventoryData";
 import NavBarCollapse from "../components/NavBarCollapse/NavBarCollapse";
 import NavItem from "../components/NavItem/NavItem";
+import Toggler from "../components/Toggler/Toggler";
 
-export function InventoryPage() {
+export default function InventoryPage() {
   const [selectedPoint, setSelectedPoint] = useState("1");
 
   const currentStock = useMemo(
@@ -29,17 +30,7 @@ export function InventoryPage() {
               />
               Resgate Verde
             </Link>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#inventoryNavbar"
-              aria-controls="inventoryNavbar"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
+            <Toggler />
             <NavBarCollapse id="inventoryNavbar">
               <NavItem link="/">Home</NavItem>
               <NavItem link="/fale-conosco">Fale Conosco</NavItem>
