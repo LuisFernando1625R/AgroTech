@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Hero() {
   return (
     <div className="d-flex flex-column justify-content-center align-items-center text-center section_1_titulo">

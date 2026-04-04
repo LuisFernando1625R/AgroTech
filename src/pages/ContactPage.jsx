@@ -1,8 +1,9 @@
 import { useState } from "react";
 import "../../css/style.css";
-import NavItem from "../components/NavItem";
+import { BrandLogo } from "../components/BrandLogo/BrandLogo";
+import NavItem from "../components/NavItem/NavItem";
 import { validateContactForm } from "../utils/validation";
-import NavBarCollapse from "../components/NavBarCollapse";
+import NavBarCollapse from "../components/NavBarCollapse/NavBarCollapse";
 import { Link } from "react-router-dom";
 
 const initialForm = {

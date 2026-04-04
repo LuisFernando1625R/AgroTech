@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import "../../css/style.css";
-import { BrandLogo } from "../components/BrandLogo";
-import NavItem from "../components/NavItem";
-import NavBarCollapse from "../components/NavBarCollapse";
+import { BrandLogo } from "../components/BrandLogo/BrandLogo";
+import NavItem from "../components/NavItem/NavItem";
+import NavBarCollapse from "../components/NavBarCollapse/NavBarCollapse";
 import { collectionPoints } from "../data/collectionPoints";
-import {hero} from "../components/Hero";
+import Hero from "../components/Hero/Hero";
 
 export function HomePage() {
   return (
@@ -40,7 +40,7 @@ export function HomePage() {
           </nav>
         </header>
 
-        <hero />
+        <Hero />
       </section>
 
       <section className="section-2" id="pontos-de-coleta">

@@ -2,8 +2,8 @@ import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import "../../css/gestao-estoque.css";
 import { beneficiaries, stockByPoint } from "../data/inventoryData";
-import NavBarCollapse from "../components/NavBarCollapse";
-import NavItem from "../components/NavItem";
+import NavBarCollapse from "../components/NavBarCollapse/NavBarCollapse";
+import NavItem from "../components/NavItem/NavItem";
 
 export function InventoryPage() {
   const [selectedPoint, setSelectedPoint] = useState("1");
