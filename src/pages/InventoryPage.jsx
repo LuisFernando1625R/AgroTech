@@ -6,8 +6,8 @@ import NavBarCollapse from "../components/NavBarCollapse";
 import NavItem from "../components/NavItem";
 import AddInventoryForm from "../components/AddInventoryForm/index.jsx";
 import UpdateBeneficiaryInfo from "../components/UpdateBeneficiaryInfo/index.jsx";
-import DeliveryStatusForm from "../components/DeliveryStatusForm/DeliveryStatusForma.jsx";
-import AddBeneficiaryForm from "../components/AddBeneficiaryForm.jsx";
+import DeliveryStatusForm from "../components/DeliveryStatusForm/DeliveryStatusForm.jsx";
+import AddBeneficiaryForm from "../components/AddBeneficiaryForm";
 
 export default function InventoryPage() {
   const [selectedPoint, setSelectedPoint] = useState("1");

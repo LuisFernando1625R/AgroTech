@@ -1,39 +1,39 @@
-export default function UpdateBeneficiaryInfo() {
+export default function AddBeneficiaryForm() {
   return (
-    <div className="update-info form-card">
+    <div className="add form-card">
       <form
         action="#"
-        className="update-beneficiary-info d-flex flex-column gap-4"
+        className="form-add-beneficiary d-flex flex-column gap-4"
       >
         <fieldset className="d-flex flex-column gap-1" name="person-info">
-          <legend className="fw-bold">Alterar Dados Cadastrais</legend>
-          <label htmlFor="update-name" className="form-label">
+          <legend>Dados pessoais</legend>
+          <label htmlFor="beneficiary-name" className="form-label">
             Nome:
           </label>
           <input
             type="text"
-            placeholder="Nome completo"
-            id="update-name"
+            placeholder="Digite seu nome completo"
+            id="beneficiary-name"
             className="form-control"
           />
 
-          <label htmlFor="update-id-number">RG ou CPF:</label>
+          <label htmlFor="beneficiary-id-number">RG ou CPF:</label>
           <input
-            id="update-id-number"
+            id="beneficiary-id-number"
             type="text"
             pattern="\d{7,9}|\d{11}"
-            placeholder="RG ou CPF"
+            placeholder="Digite seu RG ou CPF sem pontos ou hífen(-)"
             className="form-control"
           />
           <input
             type="text"
-            placeholder="REG-123"
+            placeholder="Número de Registro REG-123"
             readOnly
             className="form-control"
           />
         </fieldset>
         <button className="form-btn" type="submit">
-          Confirmar Alterações
+          Confirmar Cadastro
         </button>
       </form>
     </div>
