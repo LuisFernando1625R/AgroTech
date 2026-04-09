@@ -2,9 +2,12 @@ import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import "../../css/gestao-estoque.css";
 import { beneficiaries, stockByPoint } from "../data/inventoryData";
-import { BrandLogo } from "../components/BrandLogo/BrandLogo";
-import NavBarCollapse from "../components/NavBarCollapse/NavBarCollapse";
-import NavItem from "../components/NavItem/NavItem";
+import NavBarCollapse from "../components/NavBarCollapse";
+import NavItem from "../components/NavItem";
+import AddInventoryForm from "../components/AddInventoryForm/index.jsx";
+import UpdateBeneficiaryInfo from "../components/UpdateBeneficiaryInfo/index.jsx";
+import DeliveryStatusForm from "../components/DeliveryStatusForm/DeliveryStatusForma.jsx";
+import AddBeneficiaryForm from "../components/AddBeneficiaryForm.jsx";
 
 export default function InventoryPage() {
   const [selectedPoint, setSelectedPoint] = useState("1");
@@ -61,33 +64,51 @@ export default function InventoryPage() {
 
           <div className="cards-grid">
             {beneficiaries.map((beneficiary) => (
-              <div className="beneficiary-card" key={beneficiary.id}>
-                <div
-                  className="card-status-indicator"
-                  style={{ backgroundColor: beneficiary.indicator }}
-                ></div>
-                <div className="card-header">
-                  <h3 className="card-name">{beneficiary.name}</h3>
-                  <span className="card-registry">{beneficiary.registry}</span>
-                </div>
-                <div className="card-info">
-                  <div className="info-row">
-                    <span className="info-label">CPF/RG:</span>
-                    <span className="info-value">{beneficiary.document}</span>
-                  </div>
-                  <div className="info-row">
-                    <span className="info-label">Status:</span>
-                    <span className={`status-badge ${beneficiary.statusClass}`}>
-                      <i className={beneficiary.statusIcon}></i>
-                      {beneficiary.statusLabel}
+              <div
+                className="beneficiary-card d-flex flex-column"
+                key={beneficiary.id}
+              >
+                <div className="d-flex flex-column">
+                  <div
+                    className="card-status-indicator"
+                    style={{ backgroundColor: beneficiary.indicator }}
+                  ></div>
+                  <div className="card-header">
+                    <h3 className="card-name">{beneficiary.name}</h3>
+                    <span className="card-registry">
+                      {beneficiary.registry}
                     </span>
                   </div>
+                  <div className="card-info">
+                    <div className="info-row">
+                      <span className="info-label">CPF/RG:</span>
+                      <span className="info-value">{beneficiary.document}</span>
+                    </div>
+                    <div className="info-row">
+                      <span className="info-label">Status:</span>
+                      <span
+                        className={`status-badge ${beneficiary.statusClass}`}
+                      >
+                        <i className={beneficiary.statusIcon}></i>
+                        {beneficiary.statusLabel}
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                <div className="card-actions">
+
+                <div className="card-actions d-flex flex-column gap-2 mt-3">
+                  {beneficiary.id === 1 && (
+                    <>
+                      <DeliveryStatusForm />
+                      <UpdateBeneficiaryInfo />
+                    </>
+                  )}
+
                   <button className="btn-action btn-update" disabled>
                     <i className="bi bi-pencil-square"></i>
                     <span>Atualizar Status</span>
                   </button>
+
                   <button className="btn-action btn-edit" disabled>
                     <i className="bi bi-pencil"></i>
                     <span>Editar</span>
@@ -96,6 +117,8 @@ export default function InventoryPage() {
               </div>
             ))}
           </div>
+
+          <AddBeneficiaryForm />
 
           <div className="section-footer">
             <button className="btn-primary" type="button">
@@ -152,10 +175,15 @@ export default function InventoryPage() {
                     >
                       <div className="item-info">
                         <h4 className="item-name">{item.name}</h4>
-                        <p className="item-quantity">{item.quantity}</p>
+                        <p className="item-quantity">
+                          Quantidade: {item.quantity}
+                        </p>
                       </div>
-                      <div className="item-indicator">
-                        <span className="quantity-badge">{item.badge}</span>
+                      <div className="item-deleter">
+                        <i
+                          className="fa-regular fa-trash-can"
+                          style={{ color: "rgb(0, 135, 103)" }}
+                        ></i>
                       </div>
                     </div>
                   ))}
@@ -164,12 +192,12 @@ export default function InventoryPage() {
             </div>
           </div>
 
-          <div className="section-footer">
-            <button className="btn-primary" type="button">
-              <i className="bi bi-arrow-repeat"></i>
-              Atualizar Estoque
-            </button>
-          </div>
+          <AddInventoryForm />
+
+          <button className="btn-primary mt-4" type="button">
+            <i className="bi bi-plus-circle"></i>
+            Adicionar Item
+          </button>
         </section>
       </main>
 

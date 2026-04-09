@@ -7,6 +7,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'animate.css';
 import './styles/global.css';
 import { AppRouter } from './router/AppRouter';
+import 'https://kit.fontawesome.com/cb01e88290.js'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

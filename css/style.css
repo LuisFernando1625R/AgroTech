@@ -197,8 +197,8 @@ body {
 }
 
 .form-control {
-  border-radius: 15px;
-  border: 1px solid #227a17;
+  border-radius: 10px;
+  border: 1px solid #2a5f23;
 }
 
 #msgSucesso {

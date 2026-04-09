@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../../css/style.css";
-import NavBarCollapse from "../components/NavBarCollapse/NavBarCollapse";
-import NavItem from "../components/NavItem/NavItem";
+import NavBarCollapse from "../components/NavBarCollapse";
+import NavItem from "../components/NavItem";
 
 const initialRegister = {
   nome: "",

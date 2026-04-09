@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import "../../css/style.css";
-import { BrandLogo } from "../components/BrandLogo/BrandLogo";
-import NavItem from "../components/NavItem/NavItem";
-import NavBarCollapse from "../components/NavBarCollapse/NavBarCollapse";
+import { BrandLogo } from "../components/BrandLogo";
+import NavItem from "../components/NavItem";
+import NavBarCollapse from "../components/NavBarCollapse";
 import { collectionPoints } from "../data/collectionPoints";
-import Hero from "../components/hero/Hero";
+import Hero from "../components/Hero";
 
 export function HomePage() {
   return (
