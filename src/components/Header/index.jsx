@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { BrandLogo } from "../BrandLogo/BrandLogo";
+import { BrandLogo } from "../BrandLogo";
 
 export default function Header() {
   return (
