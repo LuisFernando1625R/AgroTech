@@ -5,7 +5,6 @@ import NavItem from "../components/NavItem/NavItem";
 import { validateContactForm } from "../utils/validation";
 import NavBarCollapse from "../components/NavBarCollapse/NavBarCollapse";
 import { Link } from "react-router-dom";
-import Toggler from "../components/Toggler/Toggler";
 
 const initialForm = {
   nome: "",
@@ -57,12 +56,22 @@ export function ContactPage() {
         <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
           <div className="container-fluid">
             <Link className="navbar-brand d-flex align-items-center" to="/">
-              <BrandLogo
-                titleClassName="titulo-subtitulo"
-                subtitleClassName="titulo-subtitulo"
+              <img
+                src="/img/logo-resgate-verde-sem-Texto-removebg.png"
+                alt="Logo da plataforma Resgate Verde"
+                width="50"
+                height="50"
               />
             </Link>
-            <Toggler />
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#homeNav"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            
             <NavBarCollapse id="inventoryNavbar">
               <NavItem link="/">Home</NavItem>
               <NavItem link="/fale-conosco">Fale Conosco</NavItem>

@@ -2,9 +2,9 @@ import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import "../../css/gestao-estoque.css";
 import { beneficiaries, stockByPoint } from "../data/inventoryData";
+import { BrandLogo } from "../components/BrandLogo/BrandLogo";
 import NavBarCollapse from "../components/NavBarCollapse/NavBarCollapse";
 import NavItem from "../components/NavItem/NavItem";
-import Toggler from "../components/Toggler/Toggler";
 
 export default function InventoryPage() {
   const [selectedPoint, setSelectedPoint] = useState("1");
@@ -19,9 +19,9 @@ export default function InventoryPage() {
   return (
     <div className="container-app">
       <header>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-          <div className="container-fluid">
-            <Link className="navbar-brand" to="/">
+        <nav className="navbar navbar-expand-lg navbar-dark">
+          <div className="container">
+            <Link className="navbar-brand d-flex align-items-center" to="/">
               <img
                 src="/img/logo-resgate-verde-sem-Texto-removebg.png"
                 alt="Logo da plataforma Resgate Verde"
@@ -30,10 +30,18 @@ export default function InventoryPage() {
               />
               Resgate Verde
             </Link>
-            <Toggler />
-            <NavBarCollapse id="inventoryNavbar">
-              <NavItem link="/">Home</NavItem>
-              <NavItem link="/fale-conosco">Fale Conosco</NavItem>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#homeNav"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+
+            <NavBarCollapse>
+              <NavItem link="/"> Home </NavItem>
+              <NavItem link="/fale-conosco"> Fale Conosco </NavItem>
             </NavBarCollapse>
           </div>
         </nav>

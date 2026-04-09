@@ -5,7 +5,6 @@ import NavItem from "../components/NavItem/NavItem";
 import NavBarCollapse from "../components/NavBarCollapse/NavBarCollapse";
 import { collectionPoints } from "../data/collectionPoints";
 import Hero from "../components/hero/Hero";
-import Toggler from "../components/Toggler/Toggler";
 
 export function HomePage() {
   return (
@@ -20,15 +19,19 @@ export function HomePage() {
                   subtitleClassName="titulo-subtitulo"
                 />
               </Link>
-
-              <Toggler />
-
+              <button
+                className="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#homeNav"
+              >
+                <span className="navbar-toggler-icon"></span>
+              </button>
+              
               <NavBarCollapse>
-                <NavItem link="#pontos-de-coleta">Pontos de Coleta</NavItem>
-                <NavItem link="https://youtu.be/51q1i9is1zg" target="_blank">
-                  Pitch Vídeo
-                </NavItem>
-                <NavItem link="/fale-conosco">Fale Conosco</NavItem>
+                <NavItem link="#pontos-de-coleta"> Pontos de Coleta </NavItem>
+                <NavItem link="https://youtu.be/51q1i9is1zg" target="_blank"> Pitch Vídeo </NavItem>
+                <NavItem link="/fale-conosco"> Fale Conosco </NavItem>
               </NavBarCollapse>
             </div>
           </nav>
