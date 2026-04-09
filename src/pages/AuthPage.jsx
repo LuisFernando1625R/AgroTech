@@ -1,19 +1,21 @@
-import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import '../../css/style.css';
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import "../../css/style.css";
+import NavBarCollapse from "../components/NavBarCollapse/NavBarCollapse";
+import NavItem from "../components/NavItem/NavItem";
 
 const initialRegister = {
-  nome: '',
-  documento: '',
-  telefone: '',
-  responsavel: '',
-  email: '',
-  senha: '',
+  nome: "",
+  documento: "",
+  telefone: "",
+  responsavel: "",
+  email: "",
+  senha: "",
 };
 
 const initialLogin = {
-  email: '',
-  senha: '',
+  email: "",
+  senha: "",
 };
 
 export function AuthPage() {
@@ -35,21 +37,24 @@ export function AuthPage() {
     event.preventDefault();
 
     if (!loginForm.email || !loginForm.senha) {
-      alert('Você ainda não tem cadastro. Por favor, cadastre-se primeiro!');
+      alert("Você ainda não tem cadastro. Por favor, cadastre-se primeiro!");
       return;
     }
 
-    if (loginForm.email === registerForm.email && loginForm.senha === registerForm.senha) {
-      navigate('/gestao-estoque');
+    if (
+      loginForm.email === registerForm.email &&
+      loginForm.senha === registerForm.senha
+    ) {
+      navigate("/gestao-estoque");
       return;
     }
 
-    alert('Senha ou Email errado, por favor tente novamente!');
+    alert("Senha ou Email errado, por favor tente novamente!");
   }
 
   function handleRegisterSubmit(event) {
     event.preventDefault();
-    alert('Cadastro preenchido com sucesso. Agora faça o login.');
+    alert("Cadastro preenchido com sucesso. Agora faça o login.");
   }
 
   return (
@@ -70,29 +75,15 @@ export function AuthPage() {
               className="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
-              data-bs-target="#authNavbar"
-              aria-controls="authNavbar"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
+              data-bs-target="#homeNav"
             >
               <span className="navbar-toggler-icon"></span>
             </button>
 
-            <div className="collapse navbar-collapse" id="authNavbar">
-              <ul className="navbar-nav ms-auto">
-                <li className="nav-item">
-                  <Link className="nav-link active" to="/">
-                    Home
-                  </Link>
-                </li>
-
-                <li className="nav-item">
-                  <Link className="nav-link" to="/fale-conosco">
-                    Fale conosco
-                  </Link>
-                </li>
-              </ul>
-            </div>
+            <NavBarCollapse>
+              <NavItem link="/"> Home </NavItem>
+              <NavItem link="/fale-conosco"> Fale Conosco </NavItem>
+            </NavBarCollapse>
           </div>
         </nav>
       </header>

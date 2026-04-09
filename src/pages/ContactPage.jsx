@@ -62,6 +62,7 @@ export function ContactPage() {
                 width="50"
                 height="50"
               />
+              Resgate Verde
             </Link>
             <button
               className="navbar-toggler"
@@ -71,10 +72,10 @@ export function ContactPage() {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-            
-            <NavBarCollapse id="inventoryNavbar">
-              <NavItem link="/">Home</NavItem>
-              <NavItem link="/fale-conosco">Fale Conosco</NavItem>
+
+            <NavBarCollapse>
+              <NavItem link="/"> Home </NavItem>
+              <NavItem link="/cadastro-login"> Participe </NavItem>
             </NavBarCollapse>
           </div>
         </nav>
