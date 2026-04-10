@@ -67,6 +67,19 @@ export default function InventoryPage() {
     );
   }
 
+  function handleDeleteItem(itemId) {
+    setStock((prev) =>
+      prev.map((point) =>
+        point.id === selectedPoint
+          ? {
+              ...point,
+              items: point.items.filter((item) => item.id !== itemId),
+            }
+          : point
+      )
+    );
+  }
+
   return (
     <div className="container-app">
       <header>
@@ -240,7 +253,16 @@ export default function InventoryPage() {
                           Quantidade: {item.quantity}
                         </p>
                       </div>
-                      <div className="item-deleter">
+                      <div
+                        className="item-deleter"
+                        onClick={() => {
+                          const confirmDelete = window.confirm("Deseja remover este item?");
+                          if (confirmDelete) {
+                            handleDeleteItem(item.id);
+                          }
+                        }}
+                        style={{ cursor: "pointer" }}
+                      >
                         <i
                           className="fa-regular fa-trash-can"
                           style={{ color: "rgb(0, 135, 103)" }}
