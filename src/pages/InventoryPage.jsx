@@ -47,6 +47,10 @@ export default function InventoryPage() {
     );
   }
 
+  function handleAddBeneficiary(newBeneficiary) {
+    setBeneficiariesList(prev => [...prev, newBeneficiary]);
+  }
+
   return (
     <div className="container-app">
       <header>
@@ -132,7 +136,7 @@ export default function InventoryPage() {
                     className="btn-action btn-update"
                     onClick={() => {
                       setSelectedBeneficiary(beneficiary);
-                      setModalType("status");
+                      setModalType("EditStatus");
                     }}
                   >
                     <i className="bi bi-pencil-square"></i>
@@ -143,7 +147,7 @@ export default function InventoryPage() {
                     className="btn-action btn-edit"
                     onClick={() => {
                       setSelectedBeneficiary(beneficiary);
-                      setModalType("edit");
+                      setModalType("EditBeneficiary");
                     }}
                   >
                     <i className="bi bi-pencil"></i>
@@ -154,10 +158,15 @@ export default function InventoryPage() {
             ))}
           </div>
 
-          <AddBeneficiaryForm />
-
           <div className="section-footer">
-            <button className="btn-primary" type="button">
+            <button
+              className="btn-primary"
+              type="button"
+              onClick={() => {
+                setSelectedBeneficiary(null);
+                setModalType("addBeneficiary");
+              }}
+            >
               <i className="bi bi-plus-circle"></i>
               Adicionar Beneficiário
             </button>
@@ -238,7 +247,7 @@ export default function InventoryPage() {
       </main>
 
       <Modal isOpen={!!modalType} onClose={() => setModalType(null)}>
-        {modalType === "status" && (
+        {modalType === "EditStatus" && (
           <DeliveryStatusForm
             beneficiary={selectedBeneficiary}
             onUpdate={(data) => {
@@ -251,7 +260,7 @@ export default function InventoryPage() {
           />
         )}
 
-        {modalType === "edit" && (
+        {modalType === "EditBeneficiary" && (
           <UpdateBeneficiaryInfo
             beneficiary={selectedBeneficiary}
             onSave={(data) => {
@@ -259,6 +268,19 @@ export default function InventoryPage() {
               setModalType(null);
               setTimeout(() => {
                 alert("Dados cadastrais atualizados com sucesso!");
+              }, 200);
+            }}
+          />
+        )}
+
+        {modalType === "addBeneficiary" && (
+          <AddBeneficiaryForm
+            onAdd={(newBeneficiary) => {
+              handleAddBeneficiary(newBeneficiary);
+              setModalType(null);
+
+              setTimeout(() => {
+                alert("Beneficiário adicionado com sucesso!");
               }, 200);
             }}
           />
