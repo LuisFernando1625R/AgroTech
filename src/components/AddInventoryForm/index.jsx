@@ -42,10 +42,10 @@ export default function AddInventoryForm({ onAdd }) {
   }
 
   return (
-    <div className="add-inventory-card">
+    <div className="add-inventory-card border p-4 rounded-3 add form-card">
       <form
         onSubmit={handleSubmit}
-        className="d-flex flex-column gap-3 m-4 p-3 border rounded"
+        className="d-flex flex-column gap-4"
       >
         <fieldset className="d-flex flex-column gap-3">
           <legend className="fw-bold mb-0">

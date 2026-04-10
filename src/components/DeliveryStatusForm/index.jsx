@@ -6,7 +6,6 @@ export default function DeliveryStatusForm({ beneficiary, onUpdate }) {
   const [queuePosition, setQueuePosition] = useState("");
   const [errors, setErrors] = useState({});
 
-  
   useEffect(() => {
     if (!beneficiary) return;
 
@@ -83,8 +82,11 @@ export default function DeliveryStatusForm({ beneficiary, onUpdate }) {
   }
 
   return (
-    <div className="delivery-status-card border p-4 rounded-3">
-      <form onSubmit={handleSubmit} className="d-flex flex-column gap-4">
+    <div className="delivery-status-card border p-4 rounded-3 add form-card">
+      <form 
+        onSubmit={handleSubmit} 
+        className="d-flex flex-column gap-4"
+      >
         <fieldset className="d-flex flex-column gap-3">
           <legend className="fw-bold">
             Status de Entrega - {beneficiary?.name}

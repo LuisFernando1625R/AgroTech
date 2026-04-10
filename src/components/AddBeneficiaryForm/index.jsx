@@ -58,8 +58,10 @@ export default function AddBeneficiaryForm({ onAdd }) {
         onSubmit={handleSubmit}
         className="form-add-beneficiary d-flex flex-column gap-4"
       >
-        <fieldset className="d-flex flex-column gap-2">
-          <legend>Dados pessoais</legend>
+        <fieldset className="d-flex flex-column gap-3">
+          <legend className="fw-bold">
+            Dados pessoais
+          </legend>
 
           <label className="form-label">Nome:</label>
           <input
