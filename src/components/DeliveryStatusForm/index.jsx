@@ -19,7 +19,11 @@ export default function DeliveryStatusForm({ beneficiary, onUpdate }) {
 
     if (beneficiary.statusLabel.includes("Recebeu em")) {
       const extractedDate = beneficiary.statusLabel.replace("Recebeu em ", "");
-      setDate(extractedDate);
+      const [day, month, year] = extractedDate.split("/");
+
+      if (day && month && year) {
+        setDate(`${year}-${month}-${day}`);
+      }
     }
 
     if (beneficiary.statusLabel.includes("Posição")) {
