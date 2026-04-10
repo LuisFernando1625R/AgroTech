@@ -6,8 +6,9 @@ import NavBarCollapse from "../components/NavBarCollapse";
 import NavItem from "../components/NavItem";
 import AddInventoryForm from "../components/AddInventoryForm/index.jsx";
 import UpdateBeneficiaryInfo from "../components/UpdateBeneficiaryInfo/index.jsx";
-import DeliveryStatusForm from "../components/DeliveryStatusForm/DeliveryStatusForm.jsx";
+import DeliveryStatusForm from "../components/DeliveryStatusForm/index.jsx";
 import AddBeneficiaryForm from "../components/AddBeneficiaryForm";
+import Modal from "../components/Modal";
 
 export default function InventoryPage() {
   const [selectedPoint, setSelectedPoint] = useState("1");
@@ -18,6 +19,33 @@ export default function InventoryPage() {
       stockByPoint[0],
     [selectedPoint],
   );
+
+  const [modalType, setModalType] = useState(null);
+  const [selectedBeneficiary, setSelectedBeneficiary] = useState(null);
+
+  const [beneficiariesList, setBeneficiariesList] = useState(beneficiaries);
+  const [stock, setStock] = useState(stockByPoint);
+
+  function handleUpdateStatus(id, statusData) {
+    setBeneficiariesList(prev =>
+      prev.map(b =>
+        b.id === id
+          ? {
+              ...b,
+              ...statusData
+            }
+          : b
+      )
+    );
+  }
+
+  function handleUpdateBeneficiary(id, updatedData) {
+    setBeneficiariesList(prev =>
+      prev.map(b =>
+        b.id === id ? { ...b, ...updatedData } : b
+      )
+    );
+  }
 
   return (
     <div className="container-app">
@@ -63,7 +91,7 @@ export default function InventoryPage() {
           </div>
 
           <div className="cards-grid">
-            {beneficiaries.map((beneficiary) => (
+           {beneficiariesList.map((beneficiary) => (
               <div
                 className="beneficiary-card d-flex flex-column"
                 key={beneficiary.id}
@@ -73,17 +101,20 @@ export default function InventoryPage() {
                     className="card-status-indicator"
                     style={{ backgroundColor: beneficiary.indicator }}
                   ></div>
+
                   <div className="card-header">
                     <h3 className="card-name">{beneficiary.name}</h3>
                     <span className="card-registry">
                       {beneficiary.registry}
                     </span>
                   </div>
+
                   <div className="card-info">
                     <div className="info-row">
                       <span className="info-label">CPF/RG:</span>
                       <span className="info-value">{beneficiary.document}</span>
                     </div>
+
                     <div className="info-row">
                       <span className="info-label">Status:</span>
                       <span
@@ -97,19 +128,24 @@ export default function InventoryPage() {
                 </div>
 
                 <div className="card-actions d-flex flex-column gap-2 mt-3">
-                  {beneficiary.id === 1 && (
-                    <>
-                      <DeliveryStatusForm />
-                      <UpdateBeneficiaryInfo />
-                    </>
-                  )}
-
-                  <button className="btn-action btn-update" disabled>
+                  <button
+                    className="btn-action btn-update"
+                    onClick={() => {
+                      setSelectedBeneficiary(beneficiary);
+                      setModalType("status");
+                    }}
+                  >
                     <i className="bi bi-pencil-square"></i>
                     <span>Atualizar Status</span>
                   </button>
 
-                  <button className="btn-action btn-edit" disabled>
+                  <button
+                    className="btn-action btn-edit"
+                    onClick={() => {
+                      setSelectedBeneficiary(beneficiary);
+                      setModalType("edit");
+                    }}
+                  >
                     <i className="bi bi-pencil"></i>
                     <span>Editar</span>
                   </button>
@@ -200,6 +236,34 @@ export default function InventoryPage() {
           </button>
         </section>
       </main>
+
+      <Modal isOpen={!!modalType} onClose={() => setModalType(null)}>
+        {modalType === "status" && (
+          <DeliveryStatusForm
+            beneficiary={selectedBeneficiary}
+            onUpdate={(data) => {
+              handleUpdateStatus(selectedBeneficiary.id, data);
+              setModalType(null);
+              setTimeout(() => {
+                alert("Status atualizado com sucesso!");
+              }, 200);
+            }}
+          />
+        )}
+
+        {modalType === "edit" && (
+          <UpdateBeneficiaryInfo
+            beneficiary={selectedBeneficiary}
+            onSave={(data) => {
+              handleUpdateBeneficiary(selectedBeneficiary.id, data)
+              setModalType(null);
+              setTimeout(() => {
+                alert("Dados cadastrais atualizados com sucesso!");
+              }, 200);
+            }}
+          />
+        )}
+      </Modal>
 
       <footer className="footer">
         <p>© 2026 Resgate Verde. Todos os direitos reservados.</p>
