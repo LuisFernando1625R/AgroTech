@@ -12,19 +12,16 @@ import Modal from "../components/Modal";
 
 export default function InventoryPage() {
   const [selectedPoint, setSelectedPoint] = useState("1");
-
-  const currentStock = useMemo(
-    () =>
-      stockByPoint.find((point) => point.id === selectedPoint) ||
-      stockByPoint[0],
-    [selectedPoint],
-  );
-
   const [modalType, setModalType] = useState(null);
   const [selectedBeneficiary, setSelectedBeneficiary] = useState(null);
-
   const [beneficiariesList, setBeneficiariesList] = useState(beneficiaries);
   const [stock, setStock] = useState(stockByPoint);
+  const currentStock = useMemo(
+    () =>
+      stock.find((point) => point.id === selectedPoint) ||
+      stock[0],
+    [selectedPoint, stock]
+  );
 
   function handleUpdateStatus(id, statusData) {
     setBeneficiariesList(prev =>
@@ -49,6 +46,25 @@ export default function InventoryPage() {
 
   function handleAddBeneficiary(newBeneficiary) {
     setBeneficiariesList(prev => [...prev, newBeneficiary]);
+  }
+
+  function handleAddItem(newItem) {
+    setStock((prev) =>
+      prev.map((point) =>
+        point.id === selectedPoint
+          ? {
+              ...point,
+              items: [
+                ...point.items,
+                {
+                  ...newItem,
+                  id: Date.now().toString(),
+                },
+              ],
+            }
+          : point
+      )
+    );
   }
 
   return (
@@ -136,7 +152,7 @@ export default function InventoryPage() {
                     className="btn-action btn-update"
                     onClick={() => {
                       setSelectedBeneficiary(beneficiary);
-                      setModalType("EditStatus");
+                      setModalType("editStatus");
                     }}
                   >
                     <i className="bi bi-pencil-square"></i>
@@ -147,7 +163,7 @@ export default function InventoryPage() {
                     className="btn-action btn-edit"
                     onClick={() => {
                       setSelectedBeneficiary(beneficiary);
-                      setModalType("EditBeneficiary");
+                      setModalType("editBeneficiary");
                     }}
                   >
                     <i className="bi bi-pencil"></i>
@@ -237,9 +253,11 @@ export default function InventoryPage() {
             </div>
           </div>
 
-          <AddInventoryForm />
-
-          <button className="btn-primary mt-4" type="button">
+          <button
+            className="btn-primary mt-4"
+            type="button"
+            onClick={() => setModalType("addItem")}
+          >
             <i className="bi bi-plus-circle"></i>
             Adicionar Item
           </button>
@@ -247,7 +265,7 @@ export default function InventoryPage() {
       </main>
 
       <Modal isOpen={!!modalType} onClose={() => setModalType(null)}>
-        {modalType === "EditStatus" && (
+        {modalType === "editStatus" && (
           <DeliveryStatusForm
             beneficiary={selectedBeneficiary}
             onUpdate={(data) => {
@@ -260,7 +278,7 @@ export default function InventoryPage() {
           />
         )}
 
-        {modalType === "EditBeneficiary" && (
+        {modalType === "editBeneficiary" && (
           <UpdateBeneficiaryInfo
             beneficiary={selectedBeneficiary}
             onSave={(data) => {
@@ -281,6 +299,19 @@ export default function InventoryPage() {
 
               setTimeout(() => {
                 alert("Beneficiário adicionado com sucesso!");
+              }, 200);
+            }}
+          />
+        )}
+
+        {modalType === "addItem" && (
+          <AddInventoryForm
+            onAdd={(newItem) => {
+              handleAddItem(newItem);
+              setModalType(null);
+
+              setTimeout(() => {
+                alert("Item adicionado ao estoque!");
               }, 200);
             }}
           />
