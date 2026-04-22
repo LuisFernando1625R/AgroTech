@@ -72,6 +72,34 @@ body {
     gap: 0.75rem;
 }
 
+.btn-custom_2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    border: 1px solid transparent;
+    color: white;
+    padding: 0.85rem 1.35rem;
+    border-radius: 999px;
+    box-shadow: 0 12px 22px rgba(22, 163, 74, 0.22);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+
+.btn-custom_2:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 18px 32px rgba(22, 163, 74, 0.24);
+    filter: brightness(1.05);
+}
+
+.btn-custom_2:active {
+    transform: translateY(0);
+    box-shadow: 0 10px 18px rgba(22, 163, 74, 0.20);
+}
+
 .navbar-brand img {
     margin-right: 0.5rem;
 }
@@ -167,7 +195,7 @@ body {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 3px #ffffff80;
 }
 
 .card-header {
@@ -280,9 +308,35 @@ body {
     opacity: 0.6;
 }
 
-.btn-action span {
-    display: none;
+/* ========== ADD BENEFICIARY FORM ========== */
+/* #3EB6A2
+#009270 */
+
+.form-card {
+    background: linear-gradient(135deg, #fafbfc 0%, #f3f4f6 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
+
+
+.form-btn{
+    padding: 0.875rem 1.75rem;
+    background-color: #009270;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    gap: 0.75rem;
+    box-shadow: var(--shadow);
+    min-height: 44px;
+}
+
 
 /* ========== FOOTER BUTTONS ========== */
 .section-footer {
@@ -303,7 +357,7 @@ body {
     font-weight: 600;
     font-size: 1rem;
     display: flex;
-    align-items: center;
+    justify-content: center;
     gap: 0.75rem;
     box-shadow: var(--shadow);
     min-height: 44px;
@@ -499,10 +553,6 @@ input[name="ponto"] {
 
     .tabs-content {
         padding: 1rem;
-    }
-
-    .btn-action span {
-        display: none;
     }
 
     .btn-primary {

@@ -34,20 +34,32 @@ body {
   animation: pulse 20s;
 }
 
-.btn-custom_2{
-  background-color:#227a17;
-  border:2px solid #1f6b14;
-  color:white;
-  padding:6px 16px;
-  border-radius:20px;
-  transition:0.3s;
-  font-weight:600;
-  font-size:14px;
+.btn-custom_2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  border: 1px solid transparent;
+  color: white;
+  padding: 0.85rem 1.35rem;
+  border-radius: 999px;
+  box-shadow: 0 12px 22px rgba(22, 163, 74, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
 }
 
-.btn-custom_2:hover{
-  background-color:#1a5f11;
-  transform:scale(1.05);
+.btn-custom_2:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 32px rgba(22, 163, 74, 0.24);
+  filter: brightness(1.05);
+}
+
+.btn-custom_2:active {
+  transform: translateY(0);
+  box-shadow: 0 10px 18px rgba(22, 163, 74, 0.20);
 }
 
 .btn-success {
@@ -101,7 +113,6 @@ body {
   background-position: center;
   width: 100%;
   min-height: 100vh;
-  padding: 0 20px;
   position: relative;
 }
 
@@ -186,8 +197,8 @@ body {
 }
 
 .form-control {
-  border-radius: 15px;
-  border: 1px solid #227a17;
+  border-radius: 10px;
+  border: 1px solid #2a5f23;
 }
 
 #msgSucesso {

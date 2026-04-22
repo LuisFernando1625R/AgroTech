@@ -1,19 +1,20 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import '../../css/style.css';
-import { BrandLogo } from '../components/BrandLogo';
-import { validateContactForm } from '../utils/validation';
+import { useState } from "react";
+import "../../css/style.css";
+import NavItem from "../components/NavItem";
+import { validateContactForm } from "../utils/validation";
+import NavBarCollapse from "../components/NavBarCollapse";
+import { Link } from "react-router-dom";
 
 const initialForm = {
-  nome: '',
-  email: '',
-  telefone: '',
-  mensagem: '',
+  nome: "",
+  email: "",
+  telefone: "",
+  mensagem: "",
 };
 
 export function ContactPage() {
   const [form, setForm] = useState(initialForm);
-  const [successMessage, setSuccessMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState("");
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -35,36 +36,47 @@ export function ContactPage() {
       return;
     }
 
-    setSuccessMessage('Mensagem enviada com sucesso! 🌱');
+    setSuccessMessage("Mensagem enviada com sucesso! 🌱");
     setForm(initialForm);
 
     setTimeout(() => {
-      setSuccessMessage('');
+      setSuccessMessage("");
     }, 4000);
   }
 
   function handleReset() {
     setForm(initialForm);
-    setSuccessMessage('');
+    setSuccessMessage("");
   }
 
   return (
     <section className="section_1 d-block">
       <header>
-        <nav className="navbar navbar-expand-lg navbar-dark">
-          <div className="container">
-            <div className="row w-100">
-              <div className="col-md-6">
-                <div className="d-flex d-inline justify-content-center align-items-center">
-                  <BrandLogo />
-                </div>
-              </div>
-            </div>
-          </div>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+          <div className="container-fluid">
+            <Link className="navbar-brand d-flex align-items-center" to="/">
+              <img
+                src="/img/logo-resgate-verde-sem-Texto-removebg.png"
+                alt="Logo da plataforma Resgate Verde"
+                width="50"
+                height="50"
+              />
+              Resgate Verde
+            </Link>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#homeNav"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
 
-          <Link className="btn-custom_2 text-decoration-none text-light p-2" to="/">
-            Home
-          </Link>
+            <NavBarCollapse>
+              <NavItem link="/"> Home </NavItem>
+              <NavItem link="/cadastro-login"> Participe </NavItem>
+            </NavBarCollapse>
+          </div>
         </nav>
       </header>
 
@@ -146,7 +158,10 @@ export function ContactPage() {
             </button>
           </div>
 
-          <div id="msgSucesso" style={{ display: successMessage ? 'block' : 'none' }}>
+          <div
+            id="msgSucesso"
+            style={{ display: successMessage ? "block" : "none" }}
+          >
             {successMessage}
           </div>
         </form>

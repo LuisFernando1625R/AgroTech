@@ -28,6 +28,7 @@ export const beneficiaries = [
     statusClass: 'status-queued',
     statusIcon: 'bi bi-clock',
     indicator: '#f59e0b',
+    
   },
 ];
 
@@ -36,27 +37,27 @@ export const stockByPoint = [
     id: '1',
     name: 'Centro Comunitário Primavera',
     items: [
-      { id: 1, name: 'Arroz Integral', quantity: '45 kg', badge: '45' },
-      { id: 2, name: 'Feijão Carioca', quantity: '32 kg', badge: '32' },
-      { id: 3, name: 'Óleo de Soja', quantity: '18 L', badge: '18' },
+      { id: 1, name: 'Arroz Integral', quantity: '45 kg'},
+      { id: 2, name: 'Feijão Carioca', quantity: '32 kg'},
+      { id: 3, name: 'Óleo de Soja', quantity: '18 L'},
     ],
   },
   {
     id: '2',
     name: 'Ginásio Municipal',
     items: [
-      { id: 1, name: 'Macarrão Integral', quantity: '28 kg', badge: '28' },
-      { id: 2, name: 'Leite em Pó', quantity: '22 caixas', badge: '22' },
-      { id: 3, name: 'Açúcar Cristal', quantity: '15 kg', badge: '15' },
+      { id: 1, name: 'Macarrão Integral', quantity: '28 kg'},
+      { id: 2, name: 'Leite em Pó', quantity: '22 caixas'},
+      { id: 3, name: 'Açúcar Cristal', quantity: '15 kg'},
     ],
   },
   {
     id: '3',
     name: 'Boa Vista',
     items: [
-      { id: 1, name: 'Flocão de Milho', quantity: '52 unidades', badge: '52' },
-      { id: 2, name: 'Biscoito Cream Cracker', quantity: '38 pacotes', badge: '38' },
-      { id: 3, name: 'Café', quantity: '42 pacotes', badge: '42' },
+      { id: 1, name: 'Flocão de Milho', quantity: '52 unidades'},
+      { id: 2, name: 'Biscoito Cream Cracker', quantity: '38 pacotes'},
+      { id: 3, name: 'Café', quantity: '42 pacotes'},
     ],
   },
 ];
