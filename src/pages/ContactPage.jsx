@@ -50,16 +50,16 @@ export function ContactPage() {
   }
 
   return (
-    <section className="section_1 d-block">
+    <main className="rv-contact-wrap d-flex flex-column">
       <header>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-          <div className="container-fluid">
+        <nav className="navbar navbar-expand-lg rv-inner-nav">
+          <div className="container">
             <Link className="navbar-brand d-flex align-items-center" to="/">
               <img
                 src="/img/logo-resgate-verde-sem-Texto-removebg.png"
                 alt="Logo da plataforma Resgate Verde"
-                width="50"
-                height="50"
+                width="44"
+                height="44"
               />
               Resgate Verde
             </Link>
@@ -80,12 +80,24 @@ export function ContactPage() {
         </nav>
       </header>
 
+      <div className="rv-contact-hero">
+        <span className="rv-eyebrow">
+          <i className="bi bi-chat-dots"></i>
+          Estamos aqui pra você
+        </span>
+        <h1>Fale Conosco</h1>
+        <p>
+          Tem alguma dúvida, sugestão ou quer fazer parte da nossa rede de
+          impacto? Mande uma mensagem e responderemos o mais breve possível.
+        </p>
+      </div>
+
       <div className="form-container">
-        <h2>Fale Conosco</h2>
+        <h2>Envie sua Mensagem</h2>
         <form onSubmit={handleSubmit} onReset={handleReset}>
           <div className="mb-3">
             <label htmlFor="nome" className="form-label">
-              Nome Completo:
+              Nome Completo
             </label>
             <input
               type="text"
@@ -102,7 +114,7 @@ export function ContactPage() {
 
           <div className="mb-3">
             <label htmlFor="email" className="form-label">
-              E-mail:
+              E-mail
             </label>
             <input
               type="email"
@@ -118,7 +130,7 @@ export function ContactPage() {
 
           <div className="mb-3">
             <label htmlFor="telefone" className="form-label">
-              Telefone:
+              Telefone
             </label>
             <input
               type="tel"
@@ -134,7 +146,7 @@ export function ContactPage() {
 
           <div className="mb-3">
             <label htmlFor="mensagem" className="form-label">
-              Mensagem:
+              Mensagem
             </label>
             <textarea
               id="mensagem"
@@ -149,11 +161,13 @@ export function ContactPage() {
             ></textarea>
           </div>
 
-          <div className="d-flex justify-content-between">
+          <div className="d-flex justify-content-between gap-2 mt-4">
             <button type="reset" className="btn btn-outline-secondary">
+              <i className="bi bi-arrow-counterclockwise me-1"></i>
               Limpar
             </button>
             <button type="submit" className="btn btn-success">
+              <i className="bi bi-send-fill me-1"></i>
               Enviar
             </button>
           </div>
@@ -166,6 +180,39 @@ export function ContactPage() {
           </div>
         </form>
       </div>
-    </section>
+
+      <footer className="rv-footer mt-auto">
+        <div className="rv-footer__inner">
+          <div className="rv-footer__top">
+            <div className="rv-footer__brand">
+              <img
+                src="/img/logo-resgate-verde-sem-Texto-removebg.png"
+                alt="Logo Resgate Verde"
+              />
+              <div className="rv-footer__brand-text">
+                <h4>𝑅𝑒𝑠𝑔𝑎𝑡𝑒 𝑉𝑒𝑟𝑑𝑒</h4>
+                <span>Resgate, Reparta, Renove</span>
+              </div>
+            </div>
+
+            <nav className="rv-footer__links" aria-label="Navegação do rodapé">
+              <Link to="/">Home</Link>
+              <Link to="/cadastro-login">Participe</Link>
+              <Link to="/fale-conosco">Fale Conosco</Link>
+            </nav>
+          </div>
+
+          <div className="rv-footer__bottom">
+            <p>© 2026 Resgate Verde — Todos os direitos reservados.</p>
+            <div className="rv-footer__socials" aria-label="Redes sociais">
+              <a href="#" aria-label="Instagram"><i className="bi bi-instagram"></i></a>
+              <a href="#" aria-label="Facebook"><i className="bi bi-facebook"></i></a>
+              <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
+              <a href="#" aria-label="YouTube"><i className="bi bi-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
   );
 }

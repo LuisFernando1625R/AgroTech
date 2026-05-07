@@ -83,14 +83,14 @@ export default function InventoryPage() {
   return (
     <div className="container-app">
       <header>
-        <nav className="navbar navbar-expand-lg navbar-dark">
+        <nav className="navbar navbar-expand-lg">
           <div className="container">
             <Link className="navbar-brand d-flex align-items-center" to="/">
               <img
                 src="/img/logo-resgate-verde-sem-Texto-removebg.png"
                 alt="Logo da plataforma Resgate Verde"
-                width="50"
-                height="50"
+                width="44"
+                height="44"
               />
               Resgate Verde
             </Link>
@@ -112,6 +112,18 @@ export default function InventoryPage() {
       </header>
 
       <main className="main-content">
+        <div className="rv-page-intro">
+          <span className="rv-eyebrow rv-eyebrow--solid" style={{ alignSelf: "flex-start" }}>
+            <i className="bi bi-clipboard-data-fill"></i>
+            Painel de Gestão
+          </span>
+          <h1>Gestão de Estoque & Beneficiários</h1>
+          <p>
+            Gerencie entregas, atualize status e mantenha o estoque dos pontos
+            de coleta sempre em dia.
+          </p>
+        </div>
+
         <section className="section beneficiaries-section">
           <div className="section-header">
             <div className="section-title">
@@ -227,6 +239,7 @@ export default function InventoryPage() {
                               "linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%)",
                             color: "white",
                             borderColor: "transparent",
+                            boxShadow: "0 8px 18px -6px rgba(31, 122, 55, 0.45)",
                           }
                         : undefined
                     }
@@ -340,8 +353,36 @@ export default function InventoryPage() {
         )}
       </Modal>
 
-      <footer className="footer">
-        <p>© 2026 Resgate Verde. Todos os direitos reservados.</p>
+      <footer className="rv-footer">
+        <div className="rv-footer__inner">
+          <div className="rv-footer__top">
+            <div className="rv-footer__brand">
+              <img
+                src="/img/logo-resgate-verde-sem-Texto-removebg.png"
+                alt="Logo Resgate Verde"
+              />
+              <div className="rv-footer__brand-text">
+                <h4>𝑅𝑒𝑠𝑔𝑎𝑡𝑒 𝑉𝑒𝑟𝑑𝑒</h4>
+                <span>Resgate, Reparta, Renove</span>
+              </div>
+            </div>
+
+            <nav className="rv-footer__links" aria-label="Navegação do rodapé">
+              <Link to="/">Home</Link>
+              <Link to="/fale-conosco">Fale Conosco</Link>
+            </nav>
+          </div>
+
+          <div className="rv-footer__bottom">
+            <p>© 2026 Resgate Verde — Todos os direitos reservados.</p>
+            <div className="rv-footer__socials" aria-label="Redes sociais">
+              <a href="#" aria-label="Instagram"><i className="bi bi-instagram"></i></a>
+              <a href="#" aria-label="Facebook"><i className="bi bi-facebook"></i></a>
+              <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
+              <a href="#" aria-label="YouTube"><i className="bi bi-youtube"></i></a>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
   );
