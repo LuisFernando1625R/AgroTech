@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel Administrativo - Gestão e Estoque</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/gestao-estoque.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+  <div class="container-app">
+    <!-- HEADER -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="/img/logo-resgate-verde-sem-Texto-removebg.png"
+              alt="Logo Gestão Social" width="50" height="50">Resgate Verde</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="fale-conosco.html">Fale conosco</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <section class="section beneficiaries-section">
+        <div class="section-header">
+          <div class="section-title">
+            <i class="bi bi-box-seam"></i>
+            <h2>Controle de Entregas</h2>
+          </div>
+          <p class="section-description">Status de entrega dos beneficiários</p>
+        </div>
+
+        <div class="cards-grid">
+          <div class="beneficiary-card">
+            <div class="card-status-indicator" style="background-color: #CCCCCC"></div>
+            <div class="card-header">
+              <h3 class="card-name">Maria Silva Santos</h3>
+              <span class="card-registry">REG-245</span>
+            </div>
+            <div class="card-info">
+              <div class="info-row">
+                <span class="info-label">CPF/RG:</span>
+                <span class="info-value">123.456.789-00</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Status:</span>
+                <span class="status-badge status-pending">
+                  <i class="bi bi-exclamation-circle"></i>
+                  Nenhuma entrega
+                </span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button class="btn-action btn-update" disabled>
+                <i class="bi bi-pencil-square"></i>
+                <span>Atualizar Status</span>
+              </button>
+              <button class="btn-action btn-edit" disabled>
+                <i class="bi bi-pencil"></i>
+                <span>Editar</span>
+              </button>
+            </div>
+          </div>
+          <div class="beneficiary-card">
+            <div class="card-status-indicator" style="background-color: #10b981"></div>
+            <div class="card-header">
+              <h3 class="card-name">João Pedro Oliveira</h3>
+              <span class="card-registry">REG-512</span>
+            </div>
+            <div class="card-info">
+              <div class="info-row">
+                <span class="info-label">CPF/RG:</span>
+                <span class="info-value">987.654.321-11</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Status:</span>
+                <span class="status-badge status-delivered">
+                  <i class="bi bi-check-circle"></i>
+                  Recebeu em 20/02/2026
+                </span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button class="btn-action btn-update" disabled>
+                <i class="bi bi-pencil-square"></i>
+                <span>Atualizar Status</span>
+              </button>
+              <button class="btn-action btn-edit" disabled>
+                <i class="bi bi-pencil"></i>
+                <span>Editar</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="beneficiary-card">
+            <div class="card-status-indicator" style="background-color: #f59e0b"></div>
+            <div class="card-header">
+              <h3 class="card-name">Ana Costa Ferreira</h3>
+              <span class="card-registry">REG-789</span>
+            </div>
+            <div class="card-info">
+              <div class="info-row">
+                <span class="info-label">CPF/RG:</span>
+                <span class="info-value">456.789.123-22</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Status:</span>
+                <span class="status-badge status-queued">
+                  <i class="bi bi-clock"></i>
+                  Fila - Posição #1
+                </span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button class="btn-action btn-update" disabled>
+                <i class="bi bi-pencil-square"></i>
+                <span>Atualizar Status</span>
+              </button>
+              <button class="btn-action btn-edit" disabled>
+                <i class="bi bi-pencil"></i>
+                <span>Editar</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-footer">
+          <button class="btn-primary">
+            <i class="bi bi-plus-circle"></i>
+            Adicionar Beneficiário
+          </button>
+        </div>
+      </section>
+
+      <section class="section estoque-section">
+        <div class="section-header">
+          <div class="section-title">
+            <i class="bi bi-boxes"></i>
+            <h2>Estoque</h2>
+          </div>
+          <p class="section-description">Estoque dos pontos de coleta</p>
+        </div>
+
+        <div class="estoque-container">
+          <div class="tabs-header">
+            <h3 class="tabs-title">Ponto de Coleta</h3>
+            <div class="tabs-buttons">
+              <input type="radio" id="tab-1" name="ponto" value="1" checked>
+              <label for="tab-1" class="tab-btn">
+                <i class="bi bi-pin-map"></i>
+                <span>Centro Comunitário Primavera</span>
+              </label>
+
+              <input type="radio" id="tab-2" name="ponto" value="2">
+              <label for="tab-2" class="tab-btn">
+                <i class="bi bi-pin-map"></i>
+                <span>Ginásio Municipal</span>
+              </label>
+
+              <input type="radio" id="tab-3" name="ponto" value="3">
+              <label for="tab-3" class="tab-btn">
+                <i class="bi bi-pin-map"></i>
+                <span>Boa Vista</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="tabs-content">
+            <div class="tab-pane active" data-ponto="1">
+              <div class="items-list">
+                <div class="estoque-item">
+                  <div class="item-info">
+                    <h4 class="item-name">Arroz Integral</h4>
+                    <p class="item-quantity">45 kg</p>
+                  </div>
+                  <div class="item-indicator">
+                    <span class="quantity-badge">45</span>
+                  </div>
+                </div>
+                <div class="estoque-item">
+                  <div class="item-info">
+                    <h4 class="item-name">Feijão Carioca</h4>
+                    <p class="item-quantity">32 kg</p>
+                  </div>
+                  <div class="item-indicator">
+                    <span class="quantity-badge">32</span>
+                  </div>
+                </div>
+                <div class="estoque-item">
+                  <div class="item-info">
+                    <h4 class="item-name">Óleo de Soja</h4>
+                    <p class="item-quantity">18 L</p>
+                  </div>
+                  <div class="item-indicator">
+                    <span class="quantity-badge">18</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane" data-ponto="2">
+              <div class="items-list">
+                <div class="estoque-item">
+                  <div class="item-info">
+                    <h4 class="item-name">Macarrão Integral</h4>
+                    <p class="item-quantity">28 kg</p>
+                  </div>
+                  <div class="item-indicator">
+                    <span class="quantity-badge">28</span>
+                  </div>
+                </div>
+                <div class="estoque-item">
+                  <div class="item-info">
+                    <h4 class="item-name">Leite em Pó</h4>
+                    <p class="item-quantity">22 caixas</p>
+                  </div>
+                  <div class="item-indicator">
+                    <span class="quantity-badge">22</span>
+                  </div>
+                </div>
+                <div class="estoque-item">
+                  <div class="item-info">
+                    <h4 class="item-name">Açúcar Cristal</h4>
+                    <p class="item-quantity">15 kg</p>
+                  </div>
+                  <div class="item-indicator">
+                    <span class="quantity-badge">15</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" data-ponto="3">
+              <div class="items-list">
+                <div class="estoque-item">
+                  <div class="item-info">
+                    <h4 class="item-name">Flocão de Milho</h4>
+                    <p class="item-quantity">52 unidades</p>
+                  </div>
+                  <div class="item-indicator">
+                    <span class="quantity-badge">52</span>
+                  </div>
+                </div>
+                <div class="estoque-item">
+                  <div class="item-info">
+                    <h4 class="item-name">Biscoito Cream Cracker</h4>
+                    <p class="item-quantity">38 pacotes</p>
+                  </div>
+                  <div class="item-indicator">
+                    <span class="quantity-badge">38</span>
+                  </div>
+                </div>
+                <div class="estoque-item">
+                  <div class="item-info">
+                    <h4 class="item-name">Café</h4>
+                    <p class="item-quantity">42 pacotes</p>
+                  </div>
+                  <div class="item-indicator">
+                    <span class="quantity-badge">42</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-footer">
+          <button class="btn-primary">
+            <i class="bi bi-arrow-repeat"></i>
+            Atualizar Estoque
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 Resgate Verde. Todos os direitos reservados.</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+  <script>
+    const tabInputs = document.querySelectorAll('input[name="ponto"]');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
+    tabInputs.forEach(input => {
+      input.addEventListener('change', function () {
+        const selectedPonto = this.value;
+        tabPanes.forEach(pane => {
+          if (pane.dataset.ponto === selectedPonto) {
+            pane.classList.add('active');
+          } else {
+            pane.classList.remove('active');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+/* ============================================================
+   MODAL — Resgate Verde
+   ============================================================ */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 41, 26, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 1rem;
+  animation: rvOverlayIn 0.2s var(--ease-out);
+}
+
+.modal-content {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 540px;
+  max-height: calc(100vh - 2rem);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: rvModalIn 0.28s var(--ease-out);
+  box-shadow: 0 32px 80px -20px rgba(8, 41, 26, 0.55), 0 4px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.75rem 0.85rem 0;
+  flex-shrink: 0;
+}
+
+.modal-body {
+  padding: 0.5rem 1.5rem 1.75rem;
+  overflow-y: auto;
+}
+
+.modal-close {
+  border: none;
+  background: var(--ink-50);
+  color: var(--ink-700);
+  border-radius: 999px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s var(--ease-out);
+}
+
+.modal-close:hover {
+  background: var(--rv-100);
+  color: var(--rv-700);
+  transform: rotate(90deg);
+}
+
+@keyframes rvOverlayIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes rvModalIn {
+  from {
+    transform: translateY(20px) scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Conditional fields used in delivery status form */
+.delivery-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  animation: fadeIn 0.25s var(--ease-out);
+}
+
+.delivery-fields input {
+  margin-bottom: 2px;
+}
