@@ -33,7 +33,7 @@ export function HomePage() {
 
               <NavBarCollapse>
                 <NavItem link="#pontos-de-coleta"> Pontos de Coleta </NavItem>
-                <NavItem link="https://youtu.be/51q1i9is1zg" target="_blank"> Pitch Vídeo </NavItem>
+                <NavItem link="https://youtu.be/7OYgGaFoR2s" target="_blank"> Pitch Vídeo </NavItem>
                 <NavItem link="/fale-conosco"> Fale Conosco </NavItem>
               </NavBarCollapse>
             </div>
